@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rod: {fileID: 21429286}
-  bobble: {fileID: 8836369762053798042, guid: 1252eca38fd329c43b4a1b3bb7d3eeaa, type: 3}
+  bobble: {fileID: 4288938469195421528, guid: 1252eca38fd329c43b4a1b3bb7d3eeaa, type: 3}
   staticBobble: {fileID: 595948479}
 --- !u!65 &21429289
 BoxCollider:

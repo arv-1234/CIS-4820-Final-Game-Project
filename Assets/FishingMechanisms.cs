@@ -8,20 +8,19 @@ public class FishingMechanisms : MonoBehaviour {
     private GameObject staticBobble;
     private GameObject launchedBobble;
     
-    //private ParticleSystem splash;
+    private ParticleSystem splash;
     
     private Renderer visible;
     private LineRenderer rodLine;
 
     private float launchVelocity;
 
-    private bool launch;
+    private bool launch, coroutineActive, canFish;
     
     void Start() {
         // Initiate variables
         rodTip = transform.Find("Bobble_Launcher").gameObject;
         staticBobble = transform.Find("Bobble (Static)").gameObject;
-        //splash = transform.Find("Watersplash").GetComponent<ParticleSystem>();
 
         visible = staticBobble.GetComponent<Renderer>();
         rodLine = gameObject.AddComponent<LineRenderer>();
@@ -35,6 +34,8 @@ public class FishingMechanisms : MonoBehaviour {
         launchVelocity = 0F;
         
         launch = false;
+        coroutineActive = false;
+        canFish = false;
     }
 
     void Update() {
@@ -44,8 +45,10 @@ public class FishingMechanisms : MonoBehaviour {
             rodLine.SetPosition(1, launchedBobble.transform.position);
 
             // Wait for a fish to appear/disappear
-            //StartCoroutine(fishAppears(Random.Range(3f, 10f)));
-            //StartCoroutine(fishDisappears(Random.Range(3f, 5f)));
+            if (!coroutineActive) {
+                coroutineActive = true;
+                StartCoroutine(fishAppearance());
+            }
         } else {
             rodLine.SetPosition(0, rodTip.transform.position);
             rodLine.SetPosition(1, staticBobble.transform.position);
@@ -78,6 +81,7 @@ public class FishingMechanisms : MonoBehaviour {
                 // Create and launch the prefab bobble
                 launchedBobble = Instantiate(prefabBobble, rodTip.transform.position, rodTip.transform.rotation);
                 launchedBobble.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, launchVelocity, 0));
+                splash = launchedBobble.transform.Find("Watersplash").GetComponent<ParticleSystem>();
 
                 // Reset the launch velocity
                 launchVelocity = 0f;
@@ -85,19 +89,22 @@ public class FishingMechanisms : MonoBehaviour {
         }
     }
     
-
-    // Delay before playing water splashes to indicate that a fish is on the line
-    /*IEnumerator fishAppears(float seconds) {
-		yield return new WaitForSeconds(seconds);
+    // Delay before changing water splash activity to indicate that a fish is on the line or not
+    IEnumerator fishAppearance() {
+        // Fish on the Line!
+		yield return new WaitForSeconds(Random.Range(3F, 10F));
         splash.Play();
         Debug.Log("Fish on the Line, Begin Capture.");
-	}
-    
-    // Delay before stopping water splashes to indicate that a fish ran away
-    IEnumerator fishDisappears(float seconds) {
-		yield return new WaitForSeconds(seconds);
-        splash.Stop();
-        Debug.Log("Fish Escaped, End Capture.");
-	}*/
-}
 
+        canFish = true;
+		yield return new WaitForSeconds(Random.Range(3F, 10F));
+
+        // Fish Escaped! This can only happen if the player decides to not begin capture
+        if (canFish) {
+            splash.Stop();
+            Debug.Log("Fish Escaped, End Capture.");
+            canFish = false;
+            coroutineActive = false;
+        }
+	}
+}

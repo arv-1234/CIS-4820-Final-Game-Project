@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+// This class manages all of the fish
 public class FishManager {
     // Declare variables
     private List<Fish> commonFish;
@@ -9,7 +10,7 @@ public class FishManager {
 
     private int num;
 
-    // Constructor: initialize all of the fish species to their rarity list
+    // Initialize all of the fish species to their rarity list
     public void initialize() {
         commonFish = new List<Fish>();
         rareFish = new List<Fish>();
@@ -25,7 +26,7 @@ public class FishManager {
         legendaryFish.Add(new Fish("Sea Urchin", "Legendary"));
     }
 
-    // Returns a random fish based on rarity
+    // Returns a random fish based on chance
     public Fish GetRandomFish() {
         // Choose a random number from 1% to 100%
         num = Random.Range(1, 100);

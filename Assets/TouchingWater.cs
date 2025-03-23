@@ -13,7 +13,7 @@ public class TouchingWater : MonoBehaviour {
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Water")) {
             // Report this to the terminal
-            Debug.Log("Bobble in Water, Begin Fishing Minigame.");
+            Debug.Log("Bobble in Water.");
             
             // Stop the bobble from moving
             Destroy(bobblePhysics);

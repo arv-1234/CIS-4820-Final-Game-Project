@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 
 public class FishingMechanisms : MonoBehaviour {
     // Declare variables
@@ -69,7 +68,7 @@ public class FishingMechanisms : MonoBehaviour {
                 canFish = false;
                 coroutineActive = false;
                 fish = fishManager.GetRandomFish();
-                Debug.Log("Attempting to capture " + fish.fishName + ".");
+                Debug.Log("Attempting to capture a " + fish.getName() + ".");
 
                 // Play minigame to get the fish
                     // If won, fish pops out of water & put in inventory
@@ -131,15 +130,15 @@ public class FishingMechanisms : MonoBehaviour {
         // Check if it's null from being destroyed early
         if (splash != null) {
             splash.Play();
-            Debug.Log("Fish on the Line, Begin Capture.");
+            Debug.Log("Fish on the Line, Left-Click to Capture!");
 
             canFish = true;
-            yield return new WaitForSeconds(Random.Range(3F, 10F));
+            yield return new WaitForSeconds(Random.Range(3F, 5F));
 
             // Fish Escaped! This can only happen if the player decides to not begin capture
             if (canFish) {
                 splash.Stop();
-                Debug.Log("Fish Escaped, End Capture.");
+                Debug.Log("Fish Escaped, Cannot Capture Anymore.");
                 canFish = false;
                 coroutineActive = false;
             }
@@ -151,6 +150,6 @@ public class FishingMechanisms : MonoBehaviour {
         pause = true;
         yield return new WaitForSeconds(1F);
         pause = false;
-        Debug.Log("Cooldown Ended.");
+        Debug.Log("Fishing Cooldown Ended.");
     }
 }

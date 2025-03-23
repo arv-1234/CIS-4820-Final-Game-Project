@@ -1,16 +1,13 @@
 using UnityEngine;
-using System.Collections;
-
-[System.Serializable]
 
 // This class holds all of the information needed for each Fish
 public class Fish {
     // Initialize variables (consider adding a fish model as another variable)
-	public string fishName;
-    public string rarity;
-    public float price;
+	private string fishName;
+    private string rarity;
+    private float price;
 
-    // Constructor that allows the user to modify the variable values
+    // Constructor that allows for variable reassignment
     public Fish(string fishName, string rarity) {
         // Assign parameter values to the variable values
         this.fishName = fishName;
@@ -24,5 +21,18 @@ public class Fish {
         } else {
             this.price = 60.0F;
         }
+    }
+
+    // Get functions that allows for variable viewing
+    public string getName() {
+        return fishName;
+    }
+    
+    public string getRarity() {
+        return rarity;
+    }
+    
+    public float getPrice() {
+        return price;
     }
 }

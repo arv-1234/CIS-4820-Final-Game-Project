@@ -64,9 +64,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.32f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Fish.cs" />
     <Compile Include="Assets\FishingMechanisms.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\TouchingWater.cs" />
+    <Compile Include="Assets\FishManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

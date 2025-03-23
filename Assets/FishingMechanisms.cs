@@ -165,7 +165,7 @@ public class FishingMechanisms : MonoBehaviour {
         Debug.Log("Fishing cooldown ended.");
     }
 
-    // Fish cooldown before it gets destroyed
+    // Delay before destroying the fish model
     IEnumerator destroyFish(GameObject Fish) {
         yield return new WaitForSeconds(5F);
         Destroy(Fish);

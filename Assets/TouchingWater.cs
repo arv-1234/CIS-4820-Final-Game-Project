@@ -11,7 +11,7 @@ public class TouchingWater : MonoBehaviour {
 
     // Function that checks if the bobble is touching the water
     private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.name == "Water") {
+        if (collision.gameObject.CompareTag("Water")) {
             // Report this to the terminal
             Debug.Log("Bobble in Water, Begin Fishing Minigame.");
             

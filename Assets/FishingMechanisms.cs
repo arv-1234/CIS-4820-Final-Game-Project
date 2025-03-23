@@ -3,20 +3,13 @@ using System.Collections;
 
 public class FishingMechanisms : MonoBehaviour {
     // Declare variables
-    private GameObject rodTip;
-    public GameObject prefabBobble;
-    private GameObject staticBobble;
-    private GameObject launchedBobble;
-    
+    public GameObject prefabBobble, prefabFish;
+    private GameObject rodTip, staticBobble, launchedBobble, launchedFish;
     private ParticleSystem splash;
-    
     private Renderer visible;
     private LineRenderer rodLine;
-
     private float launchVelocity;
-
-    private bool launch, coroutineActive, canFish, pause;
-
+    private bool launch, coroutineActive, canFish, pause, wonMinigame;
     private FishManager fishManager;
     private Fish fish;
     
@@ -40,18 +33,19 @@ public class FishingMechanisms : MonoBehaviour {
         coroutineActive = false;
         canFish = false;
         pause = false;
+        wonMinigame = false;
 
         fishManager = new FishManager();
         fishManager.initialize();
     }
 
     void Update() {
-        // Connect the tip of the rod to the bobble
+        // Connect the tip of the rod to the bobble with a line
         if (launch) {
             rodLine.SetPosition(0, rodTip.transform.position);
             rodLine.SetPosition(1, launchedBobble.transform.position);
 
-            // Wait for a fish to appear/disappear
+            // Wait for a fish to appear
             if (!coroutineActive) {
                 coroutineActive = true;
                 StartCoroutine(fishAppearance());
@@ -61,29 +55,45 @@ public class FishingMechanisms : MonoBehaviour {
             rodLine.SetPosition(1, staticBobble.transform.position);
         }
         
+        // Different actions are done depending on if a fish is biting or not
         if (canFish) {
             // Pressing/Holding Left-Click: starts the fishing minigame
             if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))) {
-                // Decide which fish appeared & report to the terminal
                 canFish = false;
                 coroutineActive = false;
-                fish = fishManager.GetRandomFish();
-                Debug.Log("Attempting to capture a " + fish.getName() + ".");
+                Debug.Log("Attempting to capture the fish.");
 
-                // Play minigame to get the fish
-                    // If won, fish pops out of water & put in inventory
-                    // If lost, fish disappears
+                // Play minigame to get the fish 
+                wonMinigame = true;
+                if (wonMinigame) {
+                    // Decide which fish appeared & report to the terminal
+                    fish = fishManager.GetRandomFish();
+                    Debug.Log("Captured a " + fish.getName() + "!");
+
+                    // Fish springs out of the water
+                    launchedBobble.GetComponent<SphereCollider>().enabled = false;
+                    launchedFish = Instantiate(prefabFish, launchedBobble.transform.position + new Vector3(0, 0.3F, 0), transform.Find("Fish_Launcher").gameObject.transform.rotation);
+                    launchedFish.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, 500F, 0));
+
+                    // Fish is put into inventory
+
+                    
+                    // Cooldown before its model is destroyed
+                    StartCoroutine(destroyFish(launchedFish));
+                } else {
+                    Debug.Log("Fish escaped.");
+                }
 
                 // Reset the bobble
                 launch = false;
                 Destroy(launchedBobble);
                 visible.enabled = true;
                 
-                // Cooldown
+                // Apply fishing cooldown
                 StartCoroutine(fishingCooldown());
             }
         } else {
-            // Cooldown before launching again
+            // Cooldown before launching a bobble again
             if (!pause) {
                 // Holding Left-Click: increases the launch velocity of the bobble
                 if (Input.GetMouseButton(0) && !launch && launchVelocity < 700F) {
@@ -130,7 +140,7 @@ public class FishingMechanisms : MonoBehaviour {
         // Check if it's null from being destroyed early
         if (splash != null) {
             splash.Play();
-            Debug.Log("Fish on the Line, Left-Click to Capture!");
+            Debug.Log("Fish on the line, left-click to capture.");
 
             canFish = true;
             yield return new WaitForSeconds(Random.Range(3F, 5F));
@@ -138,18 +148,27 @@ public class FishingMechanisms : MonoBehaviour {
             // Fish Escaped! This can only happen if the player decides to not begin capture
             if (canFish) {
                 splash.Stop();
-                Debug.Log("Fish Escaped, Cannot Capture Anymore.");
+                Debug.Log("Fish left, cannot capture it anymore.");
                 canFish = false;
                 coroutineActive = false;
             }
+        } else {
+            coroutineActive = false;
         }
 	}
 
-    // Fishing coldown after attempting to capture a fish
+    // Fishing cooldown after attempting to capture a fish
     IEnumerator fishingCooldown() {
         pause = true;
         yield return new WaitForSeconds(1F);
         pause = false;
-        Debug.Log("Fishing Cooldown Ended.");
+        Debug.Log("Fishing cooldown ended.");
+    }
+
+    // Fish cooldown before it gets destroyed
+    IEnumerator destroyFish(GameObject Fish) {
+        yield return new WaitForSeconds(5F);
+        Destroy(Fish);
+        Debug.Log("Fish model destroyed.");
     }
 }

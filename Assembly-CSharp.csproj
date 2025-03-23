@@ -64,9 +64,9 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.32f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\isFishing.cs" />
-    <Compile Include="Assets\Launch_Bobble.cs" />
+    <Compile Include="Assets\FishingMechanisms.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\TouchingWater.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

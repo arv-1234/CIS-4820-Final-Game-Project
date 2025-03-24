@@ -162,6 +162,8 @@ public class FishingMechanisms : MonoBehaviour {
         
         // Make the fishing minigame UI visible and reset its values
         minigameUI.SetActive(true);
+        fish = fishManager.GetRandomFish();
+        minigameScript.setDifficulty(fish.getRarity());
         minigameScript.reset();
 
         // Wait for the minigame to finish (in progress = 0, win = 1, lost = 2)
@@ -170,7 +172,6 @@ public class FishingMechanisms : MonoBehaviour {
         
         if (minigameProgress == 1F) {
             // Decide which fish appeared & report to the terminal
-            fish = fishManager.GetRandomFish();
             Debug.Log("Captured a " + fish.getName() + "!");
 
             // Fish springs out of the water

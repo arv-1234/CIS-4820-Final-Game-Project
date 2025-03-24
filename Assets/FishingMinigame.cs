@@ -4,15 +4,17 @@ using System.Collections;
 // This class manages the UI for the fishing minigame
 public class FishingMinigame : MonoBehaviour {
     // Declare variables
-    private float result, speed;
+    private float result, speed, minSpeed, maxSpeed, minMaxFish, minCatch, maxCatch;
     private RectTransform progressBar, catchBar, fishIcon;
     private bool changeDirection;
     public bool done;
-    private int direction, newDirection;
+    private int direction, newDirection, rarity;
     
     void Start() {
         // Initialize variables
-        reset();
+        progressBar = transform.Find("Background").Find("ProgressBar").GetComponent<RectTransform>();
+        catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
+        fishIcon = transform.Find("Background").Find("Fish").GetComponent<RectTransform>();
     }
 
     void Update() {
@@ -40,17 +42,17 @@ public class FishingMinigame : MonoBehaviour {
 
             // Holding Left-Click: moves the light green square upwards, else it goes downwards
             if (Input.GetMouseButton(0)) {
-                if (catchBar.anchoredPosition.y < 198) {
-                    catchBar.anchoredPosition = new Vector2(catchBar.anchoredPosition.x, catchBar.anchoredPosition.y + 0.7F);
+                if (catchBar.anchoredPosition.y < maxCatch) {
+                    catchBar.anchoredPosition = new Vector2(catchBar.anchoredPosition.x, catchBar.anchoredPosition.y + 1F);
                 }
             } else {
-                if (catchBar.anchoredPosition.y > -196) {
-                    catchBar.anchoredPosition = new Vector2(catchBar.anchoredPosition.x, catchBar.anchoredPosition.y - 0.7F);
+                if (catchBar.anchoredPosition.y > minCatch) {
+                    catchBar.anchoredPosition = new Vector2(catchBar.anchoredPosition.x, catchBar.anchoredPosition.y - 1F);
                 }
             }
 
             // If the fish is within the player's catch bar
-            if ((catchBar.anchoredPosition.y < fishIcon.anchoredPosition.y + 60) && (catchBar.anchoredPosition.y > fishIcon.anchoredPosition.y - 60)) {
+            if ((catchBar.anchoredPosition.y < fishIcon.anchoredPosition.y + minMaxFish) && (catchBar.anchoredPosition.y > fishIcon.anchoredPosition.y - minMaxFish)) {
                 // Progress Bar Increases
                 if (progressBar.sizeDelta.y < 540) {
                     progressBar.sizeDelta = new Vector2(progressBar.sizeDelta.x, progressBar.sizeDelta.y + 0.5F);
@@ -76,18 +78,18 @@ public class FishingMinigame : MonoBehaviour {
     IEnumerator fishDirection() {
         changeDirection = false;
 
-        // Waits 0-4 seconds before changing the direction
-        yield return new WaitForSeconds(Random.Range(0, 4));
+        // Waits 0-2 seconds before changing the direction
+        yield return new WaitForSeconds(Random.Range(0, 3));
         
         // The new direction cannot be the same as the old direction
-        newDirection = Random.Range(0, 2);
+        newDirection = Random.Range(0, 3);
         while (direction == newDirection) {
-            newDirection = Random.Range(0, 2);
+            newDirection = Random.Range(0, 3);
         }
         direction = newDirection;
 
         // Change the movement speed of the fish
-        speed = Random.Range(1F, 10F) / 10F;
+        speed = Random.Range(minSpeed, maxSpeed + 1F) / 10F;
 
         changeDirection = true;
     }
@@ -101,14 +103,45 @@ public class FishingMinigame : MonoBehaviour {
         catchBar.anchoredPosition = new Vector2(catchBar.anchoredPosition.x, -195F);
         fishIcon = transform.Find("Background").Find("Fish").GetComponent<RectTransform>();
         fishIcon.anchoredPosition = new Vector2(catchBar.anchoredPosition.x, -159F);
-        direction = Random.Range(0, 2);
+        direction = Random.Range(0, 3);
         changeDirection = true;
-        speed = Random.Range(1F, 10F) / 10F;
+        speed = Random.Range(minSpeed, maxSpeed + 1F) / 10F;
         done = false;
     } 
 
     // Returns the current result (0 = in progress, 1 = win, 2 = lost)
     public float getResult() {
         return result;
+    }
+
+    // Sets the difficulty depending on rarity (changes fish speed and catch bar size)
+    public void setDifficulty(int rarity) {
+        if (rarity == 1) {
+            minSpeed = 1F;
+            maxSpeed = 3F;
+            catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
+            catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 142.82F);
+            minMaxFish = 60F;
+            minCatch = -196F;
+            maxCatch = 198F;
+        } else if (rarity == 2) {
+            minSpeed = 4F;
+            maxSpeed = 7F;
+            catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
+            catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 103.9F);
+            minMaxFish = 40F;
+            minCatch = -211F;
+            maxCatch = 215F;
+        } else {
+            minSpeed = 8F;
+            maxSpeed = 10F;
+            catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
+            catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 77F);
+            minMaxFish = 25F;
+            minCatch = -225F;
+            maxCatch = 230F;
+        }
+
+        reset();
     }
 }

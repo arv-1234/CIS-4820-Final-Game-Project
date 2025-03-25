@@ -15,14 +15,6 @@ public class FishPopUp : MonoBehaviour {
         caughtText = transform.Find("CaughtText").GetComponent<TMP_Text>();
         newText = transform.Find("NewText").GetComponent<TMP_Text>();
         fishIcon = transform.Find("Fish").GetComponent<Image>();
-
-        caughtText.canvasRenderer.SetAlpha(0F);
-        newText.canvasRenderer.SetAlpha(0F);
-        fishIcon.canvasRenderer.SetAlpha(0F);
-
-        done = false;
-        caughtText.text = "Caught a [FishName]!";
-        newText.text = "New";
     }
 
     void Update() {

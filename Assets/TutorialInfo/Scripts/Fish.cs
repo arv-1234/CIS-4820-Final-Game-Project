@@ -6,6 +6,7 @@ public class Fish {
 	private string fishName;
     private int rarity;
     private float price;
+    private bool isNew;
 
     // Constructor that allows for variable reassignment
     public Fish(string fishName, int rarity) {
@@ -22,6 +23,8 @@ public class Fish {
         } else {
             this.price = 60.0F;
         }
+
+        isNew = true;
     }
 
     // Get functions that allow variable viewing
@@ -35,5 +38,13 @@ public class Fish {
     
     public float getPrice() {
         return price;
+    }
+    
+    public bool getIsNew() {
+        return isNew;
+    }
+
+    public void setIsNew() {
+        isNew = false;
     }
 }

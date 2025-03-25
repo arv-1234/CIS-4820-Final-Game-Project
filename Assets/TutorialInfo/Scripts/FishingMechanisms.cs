@@ -5,7 +5,7 @@ using System.Collections;
 public class FishingMechanisms : MonoBehaviour {
     // Declare variables
     public GameObject prefabBobble, prefabFish;
-    private GameObject rodTip, staticBobble, launchedBobble, launchedFish, minigameUI;
+    private GameObject rodTip, staticBobble, launchedBobble, launchedFish, minigameUI, popUpUI;
     private ParticleSystem splash;
     private Renderer visible;
     private LineRenderer rodLine;
@@ -14,6 +14,7 @@ public class FishingMechanisms : MonoBehaviour {
     private FishManager fishManager;
     private Fish fish;
     private FishingMinigame minigameScript;
+    private FishPopUp popUpUIScript;
     
     void Start() {
         // Initiate variables
@@ -43,6 +44,10 @@ public class FishingMechanisms : MonoBehaviour {
         minigameUI = GameObject.Find("FishingMinigame");
         minigameScript = minigameUI.GetComponent<FishingMinigame>();
         minigameUI.SetActive(false);
+
+        popUpUI = GameObject.Find("FishPopUp");
+        popUpUIScript = popUpUI.GetComponent<FishPopUp>();
+        popUpUI.SetActive(false);
     }
 
     void Update() {
@@ -174,8 +179,11 @@ public class FishingMechanisms : MonoBehaviour {
         minigameProgress = minigameScript.getResult();
         
         if (minigameProgress == 1F) {
-            // Report which fish appeared to the terminal
-            Debug.Log("Captured a " + fish.getName() + "!");
+            // Report which fish appeared
+            popUpUI.SetActive(true);
+            popUpUIScript.reset(fish.getName(), fish.getIsNew());
+            yield return new WaitUntil(() => popUpUIScript.done);
+            fish.setIsNew();
 
             // Fish springs out of the water
             launchedBobble.GetComponent<SphereCollider>().enabled = false;

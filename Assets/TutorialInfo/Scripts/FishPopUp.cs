@@ -1,17 +1,24 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 using UnityEngine.UI;
 
 // This class manages the fish capture notification
 public class FishPopUp : MonoBehaviour {
     // Declare variables
     public bool done;
-    private Text caughtText, newText;
+    private TMP_Text caughtText, newText;
+    private Image fishIcon;
 
     void Start() {
         // Initiate variables
-        caughtText = transform.Find("CaughtText").GetComponent<Text>();
-        newText = transform.Find("NewText").GetComponent<Text>();
+        caughtText = transform.Find("CaughtText").GetComponent<TMP_Text>();
+        newText = transform.Find("NewText").GetComponent<TMP_Text>();
+        fishIcon = transform.Find("Fish").GetComponent<Image>();
+
+        caughtText.canvasRenderer.SetAlpha(0F);
+        newText.canvasRenderer.SetAlpha(0F);
+        fishIcon.canvasRenderer.SetAlpha(0F);
 
         done = false;
         caughtText.text = "Caught a [FishName]!";
@@ -19,12 +26,22 @@ public class FishPopUp : MonoBehaviour {
     }
 
     void Update() {
-        // "Animate" the pop up UI
-        StartCoroutine(animationUI());
+        // Make the pop up fade in and out
+        if (!done) {
+            StartCoroutine(fadeAnimation(3F));
+        }
     }
 
-    // Resets the values, edits the text, and displays if it's new
+    // Reset the values, edit the text, and display if it's new
     public void reset(string fishName, bool isNew) {
+        caughtText = transform.Find("CaughtText").GetComponent<TMP_Text>();
+        newText = transform.Find("NewText").GetComponent<TMP_Text>();
+        fishIcon = transform.Find("Fish").GetComponent<Image>();
+
+        caughtText.canvasRenderer.SetAlpha(0F);
+        newText.canvasRenderer.SetAlpha(0F);
+        fishIcon.canvasRenderer.SetAlpha(0F);
+
         done = false;
         caughtText.text = "Caught a " + fishName + "!";
         if (isNew) {
@@ -34,14 +51,21 @@ public class FishPopUp : MonoBehaviour {
         }
     }
 
-    IEnumerator animationUI() {
-        // Zoom in on the UI
+    IEnumerator fadeAnimation(float seconds) {
+        // Return true early to not keep the program waiting
+        done = true;
 
+        // Fade in
+        caughtText.CrossFadeAlpha(1, 0.5F, false);
+        newText.CrossFadeAlpha(1, 0.5F, false);
+        fishIcon.CrossFadeAlpha(1, 0.5F, false);
+        
+        // Wait for a few seconds
+        yield return new WaitForSeconds(0.5F + seconds);
 
-
-        // Wait for 5 seconds
-        yield return new WaitForSeconds(5F);
-
-        // Zoom out on the UI
+        // Fade out
+        caughtText.CrossFadeAlpha(0, 0.5F, false);
+        newText.CrossFadeAlpha(0, 0.5F, false);
+        fishIcon.CrossFadeAlpha(0, 0.5F, false);
     }
 }

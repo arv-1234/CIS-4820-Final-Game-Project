@@ -1130,7 +1130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 90.48365}
+  m_AnchoredPosition: {x: 0, y: 94.8}
   m_SizeDelta: {x: 200, y: 23.0547}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102480669
@@ -1158,7 +1158,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1182,8 +1182,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_text: Caught a [FishName]!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1672,7 +1672,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2, y: 157}
-  m_SizeDelta: {x: 73.9261, y: 42.3436}
+  m_SizeDelta: {x: 70, y: 41}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1734496075
 MonoBehaviour:
@@ -1988,9 +1988,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2058521227}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb06d7a08ec0efa448d17047b6cccd68, type: 3}
+  m_Script: {fileID: 11500000, guid: 0fdbae72ea42a094b810ea2d32870cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  done: 0
 --- !u!114 &2058521229
 MonoBehaviour:
   m_ObjectHideFlags: 0

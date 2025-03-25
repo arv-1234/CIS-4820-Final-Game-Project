@@ -183,6 +183,8 @@ public class FishingMechanisms : MonoBehaviour {
             popUpUI.SetActive(true);
             popUpUIScript.reset(fish.getName(), fish.getIsNew());
             yield return new WaitUntil(() => popUpUIScript.done);
+
+            // Add it to the fish index and set isNew value to false
             fish.setIsNew();
 
             // Fish springs out of the water

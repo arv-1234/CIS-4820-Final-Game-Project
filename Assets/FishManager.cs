@@ -27,7 +27,7 @@ public class FishManager {
     }
 
     // Returns a random fish based on chance
-    public Fish GetRandomFish() {
+    public Fish getRandomFish() {
         // Choose a random number from 1% to 100%
         num = Random.Range(1, 100);
 

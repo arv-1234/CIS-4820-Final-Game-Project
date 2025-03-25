@@ -24,7 +24,7 @@ public class Fish {
         }
     }
 
-    // Get functions that allows for variable viewing
+    // Get functions that allow variable viewing
     public string getName() {
         return fishName;
     }

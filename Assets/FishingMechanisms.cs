@@ -46,7 +46,7 @@ public class FishingMechanisms : MonoBehaviour {
     }
 
     void Update() {
-        // No actions can be done while being in a fishing minigame
+        // No actions can be done while in a fishing minigame
         if (!playingMinigame) {
             // Connect the tip of the rod to the bobble with a line
             if (launch) {
@@ -116,12 +116,12 @@ public class FishingMechanisms : MonoBehaviour {
         }
     }
     
-    // Delay before changing the water particles to indicate that a fish is on the line or not
+    // Delay before changing the water particles to indicate that a fish is (or is not) on the line
     IEnumerator fishAppearance() {
         cancel = false;
 		yield return new WaitForSeconds(Random.Range(3F, 9F));
 
-        // Check if it's null from being destroyed earlier
+        // Check if it's null and/or cancelled from being destroyed earlier
         if (splash != null && !cancel) {
             // Fish on the line
             splash.Play();
@@ -157,23 +157,24 @@ public class FishingMechanisms : MonoBehaviour {
         Debug.Log("Fish model destroyed.");
     }
 
+    // Deals with the visiblity, resetting, and results of the fishing minigame UI
     IEnumerator minigame() {
         // Stop Update() from running new events
         playingMinigame = true;
         Debug.Log("Minigame in progress.");
         
-        // Make the fishing minigame UI visible and reset its values
+        // Make the fishing minigame UI visible, change the difficulty, and reset its values
         minigameUI.SetActive(true);
-        fish = fishManager.GetRandomFish();
+        fish = fishManager.getRandomFish();
         minigameScript.setDifficulty(fish.getRarity());
         minigameScript.reset();
 
-        // Wait for the minigame to finish (in progress = 0, win = 1, lost = 2)
+        // Wait for the minigame to finish and get the result (in progress = 0, win = 1, lost = 2)
         yield return new WaitUntil(() => minigameScript.done);
         minigameProgress = minigameScript.getResult();
         
         if (minigameProgress == 1F) {
-            // Decide which fish appeared & report to the terminal
+            // Report which fish appeared to the terminal
             Debug.Log("Captured a " + fish.getName() + "!");
 
             // Fish springs out of the water

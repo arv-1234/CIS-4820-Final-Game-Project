@@ -18,7 +18,7 @@ public class FishingMinigame : MonoBehaviour {
     }
 
     void Update() {
-        // Once done, pause everything
+        // Once the minigame is finished, pause everything
         if (!done) {
             // Changes the fish's direction
             if (changeDirection) {
@@ -40,7 +40,7 @@ public class FishingMinigame : MonoBehaviour {
                 // Fish stands still
             }
 
-            // Holding Left-Click: moves the light green square upwards, else it goes downwards
+            // Holding Left-Click: moves the catch bar upwards, else it goes downwards
             if (Input.GetMouseButton(0)) {
                 if (catchBar.anchoredPosition.y < maxCatch) {
                     catchBar.anchoredPosition = new Vector2(catchBar.anchoredPosition.x, catchBar.anchoredPosition.y + 1F);
@@ -118,7 +118,7 @@ public class FishingMinigame : MonoBehaviour {
     public void setDifficulty(int rarity) {
         if (rarity == 1) {
             minSpeed = 1F;
-            maxSpeed = 3F;
+            maxSpeed = 5F;
             catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
             catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 142.82F);
             minMaxFish = 60F;
@@ -126,7 +126,7 @@ public class FishingMinigame : MonoBehaviour {
             maxCatch = 198F;
         } else if (rarity == 2) {
             minSpeed = 4F;
-            maxSpeed = 7F;
+            maxSpeed = 8F;
             catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
             catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 103.9F);
             minMaxFish = 40F;

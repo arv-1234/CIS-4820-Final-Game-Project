@@ -1,29 +1,42 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 // This class manages the fish capture notification
 public class FishPopUp : MonoBehaviour {
-    // Declare Variables
-    private string fishName;
-    bool done;
-    
+    // Declare variables
+    public bool done;
+    private Text caughtText, newText;
 
     void Start() {
+        // Initiate variables
+        caughtText = transform.Find("CaughtText").GetComponent<Text>();
+        newText = transform.Find("NewText").GetComponent<Text>();
+
         done = false;
+        caughtText.text = "Caught a [FishName]!";
+        newText.text = "New";
     }
 
     void Update() {
-        // Move the pop up UI
+        // "Animate" the pop up UI
         StartCoroutine(animationUI());
     }
 
-    // Constructor: gets the fish name and edits the text
-    public void FishPopup(string fishName) {
-        this.fishName = fishName;
+    // Resets the values, edits the text, and displays if it's new
+    public void reset(string fishName, bool isNew) {
+        done = false;
+        caughtText.text = "Caught a " + fishName + "!";
+        if (isNew) {
+            newText.text = "New";
+        } else {
+            newText.text = "";
+        }
     }
 
     IEnumerator animationUI() {
         // Zoom in on the UI
+
 
 
         // Wait for 5 seconds

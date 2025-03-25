@@ -10,7 +10,7 @@ public class FishingMechanisms : MonoBehaviour {
     private Renderer visible;
     private LineRenderer rodLine;
     private float launchVelocity, minigameProgress;
-    private bool launch, coroutineActive, canFish, pause, playingMinigame; 
+    private bool launch, coroutineActive, canFish, pause, playingMinigame, cancel; 
     private FishManager fishManager;
     private Fish fish;
     private FishingMinigame minigameScript;
@@ -88,6 +88,7 @@ public class FishingMechanisms : MonoBehaviour {
                         if (launch) {
                             // The bobble returns to the rod
                             launch = false;
+                            cancel = true;
 
                             // Destroy the launched bobble
                             Destroy(launchedBobble);
@@ -117,10 +118,11 @@ public class FishingMechanisms : MonoBehaviour {
     
     // Delay before changing the water particles to indicate that a fish is on the line or not
     IEnumerator fishAppearance() {
-		yield return new WaitForSeconds(Random.Range(3F, 10F));
+        cancel = false;
+		yield return new WaitForSeconds(Random.Range(3F, 9F));
 
         // Check if it's null from being destroyed earlier
-        if (splash != null) {
+        if (splash != null && !cancel) {
             // Fish on the line
             splash.Play();
             Debug.Log("Fish on the line, left-click to capture.");

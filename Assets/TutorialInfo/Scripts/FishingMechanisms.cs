@@ -5,7 +5,7 @@ using System.Collections;
 public class FishingMechanisms : MonoBehaviour {
     // Declare variables
     public GameObject prefabBobble, prefabFish;
-    private GameObject rodTip, staticBobble, launchedBobble, launchedFish, minigameUI, popUpUI;
+    private GameObject rodTip, staticBobble, launchedBobble, launchedFish, minigameUI, popUpUI, fishIndexUI;
     private ParticleSystem splash;
     private Renderer visible;
     private LineRenderer rodLine;
@@ -14,7 +14,8 @@ public class FishingMechanisms : MonoBehaviour {
     private FishManager fishManager;
     private Fish fish;
     private FishingMinigame minigameScript;
-    private FishPopUp popUpUIScript;
+    private FishPopUp popUpScript;
+    private FishIndex fishIndexScript;
     
     void Start() {
         // Initiate variables
@@ -46,8 +47,11 @@ public class FishingMechanisms : MonoBehaviour {
         minigameUI.SetActive(false);
 
         popUpUI = GameObject.Find("FishPopUp");
-        popUpUIScript = popUpUI.GetComponent<FishPopUp>();
+        popUpScript = popUpUI.GetComponent<FishPopUp>();
         popUpUI.SetActive(false);
+
+        fishIndexUI = GameObject.Find("FishIndexBook");
+        fishIndexScript = fishIndexUI.GetComponent<FishIndex>();
     }
 
     void Update() {
@@ -181,10 +185,11 @@ public class FishingMechanisms : MonoBehaviour {
         if (minigameProgress == 1F) {
             // Report which fish appeared
             popUpUI.SetActive(true);
-            popUpUIScript.reset(fish.getName(), fish.getIsNew());
-            yield return new WaitUntil(() => popUpUIScript.done);
+            popUpScript.reset(fish.getName(), fish.getIsNew());
+            yield return new WaitUntil(() => popUpScript.done);
 
             // Add it to the fish index and set isNew value to false
+            fishIndexScript.revealFish(fish.getName());
             fish.setIsNew();
 
             // Fish springs out of the water

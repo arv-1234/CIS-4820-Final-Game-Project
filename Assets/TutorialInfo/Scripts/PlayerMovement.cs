@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     private float gravity = -9.81f;
 
+    private bool inAir = false;
+
     public float moveSpeed = 5.0f;
 
     public float jumpHeight = 1.0f;
@@ -57,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         yVelocity += gravity * Time.deltaTime;
-
         playerVelocity.y = yVelocity;
 
         float moveHorz = Input.GetAxis("Horizontal");

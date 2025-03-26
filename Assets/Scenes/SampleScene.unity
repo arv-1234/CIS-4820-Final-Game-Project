@@ -2343,7 +2343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59fc7328a1c86734795f8a88582897fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.000008583069
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59fc7328a1c86734795f8a88582897fd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2413,6 +2413,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  jumpHeight: 1
+  rotateSpeed: 50
+  yVelocity: 0
 --- !u!143 &785766885
 CharacterController:
   m_ObjectHideFlags: 0

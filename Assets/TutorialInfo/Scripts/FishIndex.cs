@@ -41,13 +41,13 @@ public class FishIndex : MonoBehaviour {
     }
 
     // Given the new fish's name, reveal it in the fish index
-    public void revealFish(string search) {
+    public void revealFish(string fish) {
         // Get the fish's text and image
-        fishName = transform.Find("Background").Find(search).Find("Text").GetComponent<TMP_Text>();
-        hiddenFishIcon = transform.Find("Background").Find(search).Find("ImageBlack").GetComponent<Image>();
+        fishName = transform.Find("Background").Find(fish).Find("Text").GetComponent<TMP_Text>();
+        hiddenFishIcon = transform.Find("Background").Find(fish).Find("ImageBlack").GetComponent<Image>();
 
         // Reveal the fish's name and image
-        fishName.text = search;
+        fishName.text = fish;
         hiddenFishIcon.canvasRenderer.SetAlpha(0F);
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 // This class manages the fish capture notification
 public class FishPopUp : MonoBehaviour {
     // Declare variables
-    public bool done;
+    public bool exit;
     private TMP_Text caughtText, newText;
     private Image fishIcon;
 
@@ -19,8 +19,8 @@ public class FishPopUp : MonoBehaviour {
 
     void Update() {
         // Make the pop up fade in and out
-        if (!done) {
-            StartCoroutine(fadeAnimation(3F));
+        if (!exit) {
+            StartCoroutine(fadeAnimation());
         }
     }
 
@@ -34,7 +34,8 @@ public class FishPopUp : MonoBehaviour {
         newText.canvasRenderer.SetAlpha(0F);
         fishIcon.canvasRenderer.SetAlpha(0F);
 
-        done = false;
+        exit = false;
+
         caughtText.text = "Caught a " + fishName + "!";
         if (isNew) {
             newText.text = "New";
@@ -43,9 +44,9 @@ public class FishPopUp : MonoBehaviour {
         }
     }
 
-    IEnumerator fadeAnimation(float seconds) {
+    IEnumerator fadeAnimation() {
         // Return true early to not keep the program waiting
-        done = true;
+        exit = true;
 
         // Fade in
         caughtText.CrossFadeAlpha(1, 0.5F, false);
@@ -53,7 +54,7 @@ public class FishPopUp : MonoBehaviour {
         fishIcon.CrossFadeAlpha(1, 0.5F, false);
         
         // Wait for a few seconds
-        yield return new WaitForSeconds(0.5F + seconds);
+        yield return new WaitForSeconds(3F);
 
         // Fade out
         caughtText.CrossFadeAlpha(0, 0.5F, false);

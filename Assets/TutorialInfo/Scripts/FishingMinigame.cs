@@ -7,7 +7,7 @@ public class FishingMinigame : MonoBehaviour {
     private float result, speed, minSpeed, maxSpeed, minMaxFish, minCatch, maxCatch;
     private RectTransform progressBar, catchBar, fishIcon;
     private bool changeDirection;
-    public bool done;
+    public bool exit;
     private int direction, newDirection, rarity;
     
     void Start() {
@@ -18,8 +18,8 @@ public class FishingMinigame : MonoBehaviour {
     }
 
     void Update() {
-        // Once the minigame is finished, pause everything
-        if (!done) {
+        // Once the minigame is finished, exit
+        if (!exit) {
             // Changes the fish's direction
             if (changeDirection) {
                 StartCoroutine(fishDirection());
@@ -57,25 +57,26 @@ public class FishingMinigame : MonoBehaviour {
                 if (progressBar.sizeDelta.y < 540) {
                     progressBar.sizeDelta = new Vector2(progressBar.sizeDelta.x, progressBar.sizeDelta.y + 0.5F);
                 } else {
-                    // Progress Bar is max, we win!
+                    // Progress Bar is at max (100%), we win!
                     result = 1F;
-                    done = true;
+                    exit = true;
                 }
             } else {
                 // Progress Bar Decreases
                 if (progressBar.sizeDelta.y > 0) {
                     progressBar.sizeDelta = new Vector2(progressBar.sizeDelta.x, progressBar.sizeDelta.y - 0.5F);
                 } else {
-                    // Progress Bar is min, we lost!
+                    // Progress Bar is at min (0%), we lost!
                     result = 2F;
-                    done = true;
+                    exit = true;
                 }
             }
         }
     }
 
-    // Delay before the fish switches directions
+    // Delay before switching the fish's directions
     IEnumerator fishDirection() {
+        // Update() doesn't constantly run this code
         changeDirection = false;
 
         // Waits 0-2 seconds before changing the direction
@@ -94,27 +95,34 @@ public class FishingMinigame : MonoBehaviour {
         changeDirection = true;
     }
 
-    // Resets the values (to make the minigame replayable)
+    // Resets the values (replayability)
     public void reset() {
         result = 0F;
+
         progressBar = transform.Find("Background").Find("ProgressBar").GetComponent<RectTransform>();
         progressBar.sizeDelta = new Vector2(progressBar.sizeDelta.x, 149.09F);
+
         catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
         catchBar.anchoredPosition = new Vector2(catchBar.anchoredPosition.x, -195F);
+        
         fishIcon = transform.Find("Background").Find("Fish").GetComponent<RectTransform>();
         fishIcon.anchoredPosition = new Vector2(catchBar.anchoredPosition.x, -159F);
+
         direction = Random.Range(0, 3);
+
         changeDirection = true;
+
         speed = Random.Range(minSpeed, maxSpeed + 1F) / 10F;
-        done = false;
+
+        exit = false;
     } 
 
-    // Returns the current result (0 = in progress, 1 = win, 2 = lost)
+    // Returns the current result (1F = win, 2F = lost)
     public float getResult() {
         return result;
     }
 
-    // Sets the difficulty depending on rarity (changes fish speed and catch bar size)
+    // Sets the difficulty depending on the fish's rarity (changes fish speed, catch bar size, and fish range)
     public void setDifficulty(int rarity) {
         if (rarity == 1) {
             minSpeed = 1F;

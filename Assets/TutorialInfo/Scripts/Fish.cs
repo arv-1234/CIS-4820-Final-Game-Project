@@ -2,7 +2,7 @@ using UnityEngine;
 
 // This class holds all of the information needed for each Fish
 public class Fish {
-    // Declare variables (consider adding a fish model as another variable)
+    // Declare variables
 	private string fishName;
     private int rarity;
     private float price;
@@ -44,6 +44,7 @@ public class Fish {
         return isNew;
     }
 
+    // Set function that tells us that the fish is old
     public void setIsNew() {
         isNew = false;
     }

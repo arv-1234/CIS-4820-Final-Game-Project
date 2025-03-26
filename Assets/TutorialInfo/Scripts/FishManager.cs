@@ -16,14 +16,14 @@ public class FishManager {
         rareFish = new List<Fish>();
         legendaryFish = new List<Fish>();
 
-        commonFish.Add(new Fish("Shrimp", 1));
-        commonFish.Add(new Fish("Squid", 1));
+        commonFish.Add(new Fish("Beta Fish", 1));
+        commonFish.Add(new Fish("Salmon", 1));
         commonFish.Add(new Fish("Flying Fish", 1));
-        commonFish.Add(new Fish("Crab", 1));
-        rareFish.Add(new Fish("Eel", 2));
-        rareFish.Add(new Fish("Salmon", 2));
-        rareFish.Add(new Fish("Tuna", 2));
-        legendaryFish.Add(new Fish("Sea Urchin", 3));
+        commonFish.Add(new Fish("Tuna", 1));
+        rareFish.Add(new Fish("Squid", 2));
+        rareFish.Add(new Fish("Flounder", 2));
+        rareFish.Add(new Fish("Turtle", 2));
+        legendaryFish.Add(new Fish("Shark", 3));
     }
 
     // Returns a random fish based on chance

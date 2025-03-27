@@ -11,12 +11,12 @@ public class PlayerMovement : MonoBehaviour
     private float gravity = -9.81f;
     public float moveSpeed = 5.0f;
     public float runSpeed = 8.0f;
-    public float jumpHeight = 1.0f;
+    public float jumpHeight = 5.0f;
     public float rotateSpeed = 50.0f;
 
     Vector3 playerVelocity;
     Vector3 rotateDirection;
-    public float yVelocity = 0;
+    float yVelocity = 0.0f;
     private bool isJumping = false;
 
     void Start()
@@ -27,49 +27,65 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        playerVelocity = new Vector3(0, 0, Input.GetAxis("Vertical"));
+        // **Capture movement input**
+        Vector3 inputDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
+        inputDirection = transform.TransformDirection(inputDirection); // Convert local to world space
 
+        // **Handle running**
         if (Input.GetKey(KeyCode.P))
         {
-            playerAnimator.CrossFade("Run", 0.1f);  // Play run animation if P is pressed
-            playerVelocity *= runSpeed;
+            playerAnimator.CrossFade("Run", 0.1f);
+            inputDirection *= runSpeed;
         }
         else
         {
-            if (playerVelocity.magnitude == 0 && !isJumping)  // Prevent Idle when jumping
+            if (inputDirection.magnitude == 0 && !isJumping)  
             {
-                playerAnimator.CrossFade("Idle", 0.1f);  // Play idle if no movement
+                playerAnimator.CrossFade("Idle", 0.1f);
             }
-            else if (!isJumping)  // Only transition to walk if not jumping
+            else if (!isJumping)  
             {
-                playerAnimator.CrossFade("Walk", 0.1f);  // Play walking animation
-                playerVelocity *= moveSpeed;
+                playerAnimator.CrossFade("Walk", 0.1f);
+                inputDirection *= moveSpeed;
             }
         }
 
-        playerVelocity = transform.TransformDirection(playerVelocity);
-
-        // **Jump Logic**
-        if (controller.isGrounded)
+        // **Maintain forward momentum while airborne**
+        if (IsGrounded()) 
         {
+            yVelocity = 0; // Reset vertical velocity when grounded
+
             if (isJumping)
             {
-                playerAnimator.CrossFade("Idle", 0.1f);  // Once landed, transition back to Idle (Replace with play if need be)
+                playerAnimator.CrossFade("Idle", 0.1f);  
             }
             isJumping = false;
 
             if (Input.GetButtonDown("Jump"))
             {
                 Debug.Log("Jump");
-                playerAnimator.CrossFade("Jump", 0.1f);  // Play Jump animation using Play()
+                playerAnimator.CrossFade("Jump", 0.1f);
                 yVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 isJumping = true;
             }
+
+            // Apply new movement input only when grounded
+            playerVelocity = inputDirection;
+        }
+        else
+        {
+            // Apply gravity while in the air
+            yVelocity += gravity * Time.deltaTime;
+
+            // Keep momentum while airborne (preserve x and z)
+            playerVelocity.x = inputDirection.x;
+            playerVelocity.z = inputDirection.z;
         }
 
-        yVelocity += gravity * Time.deltaTime;
+        // **Apply vertical movement**
         playerVelocity.y = yVelocity;
 
+        // **Handle rotation**
         float moveHorz = Input.GetAxis("Horizontal");
         if (moveHorz > 0)
             rotateDirection = new Vector3(0, 1, 0);
@@ -79,6 +95,13 @@ public class PlayerMovement : MonoBehaviour
             rotateDirection = Vector3.zero;
 
         controller.transform.Rotate(rotateDirection, rotateSpeed * Time.deltaTime);
+
+        // **Move the character**
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, controller.height / 2 + 0.1f);
     }
 }

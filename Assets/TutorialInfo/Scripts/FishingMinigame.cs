@@ -20,7 +20,7 @@ public class FishingMinigame : MonoBehaviour {
 
         // Make them invisible
         imageVisability = transform.Find("Background").GetComponentsInChildren<Image>();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < imageVisability.Length; i++) {
             imageVisability[i].enabled = false;
         }
 
@@ -69,7 +69,7 @@ public class FishingMinigame : MonoBehaviour {
                 } else {
                     // Progress Bar is at max (100%), we win!
                     result = 1F;
-                    for (int i = 0; i < 5; i++) {
+                    for (int i = 0; i < imageVisability.Length; i++) {
                         imageVisability[i].enabled = false;
                     }
                     exit = true;
@@ -81,7 +81,7 @@ public class FishingMinigame : MonoBehaviour {
                 } else {
                     // Progress Bar is at min (0%), we lost!
                     result = 2F;
-                    for (int i = 0; i < 5; i++) {
+                    for (int i = 0; i < imageVisability.Length; i++) {
                         imageVisability[i].enabled = false;
                     }
                     exit = true;
@@ -125,7 +125,7 @@ public class FishingMinigame : MonoBehaviour {
 
         speed = Random.Range(minSpeed, maxSpeed + 1F) / 10F;
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < imageVisability.Length; i++) {
             imageVisability[i].enabled = true;
         }
 

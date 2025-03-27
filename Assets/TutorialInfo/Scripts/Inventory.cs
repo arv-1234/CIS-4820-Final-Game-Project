@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 // This class toggles the Inventory
 public class Inventory : MonoBehaviour {
     // Declare variables
     private RectTransform openCooler;
+    private Image[] imageVisibility;
     private bool isOpen;
 
     void Start() {
@@ -11,6 +13,14 @@ public class Inventory : MonoBehaviour {
         openCooler = transform.Find("Background").GetComponent<RectTransform>();
         openCooler.anchoredPosition = new Vector2(openCooler.anchoredPosition.x, -536F);
         isOpen = false;
+
+        // Make the UI invisible
+        imageVisibility = transform.Find("Background").GetComponentsInChildren<Image>();
+        for (int i = 0; i < imageVisibility.Length; i++) {
+            if (imageVisibility[i] != null) {
+                imageVisibility[i].enabled = false;
+            }
+        }
     }
 
     void Update() {
@@ -24,6 +34,13 @@ public class Inventory : MonoBehaviour {
         }
 
         if (isOpen) {
+            // Make the UI visible
+            for (int i = 0; i < imageVisibility.Length; i++) {
+                if (imageVisibility[i] != null) {
+                    imageVisibility[i].enabled = true;
+                }
+            }
+
             // Move Up
             if (openCooler.anchoredPosition.y <= 1F) {
                 openCooler.anchoredPosition = new Vector2(openCooler.anchoredPosition.x, openCooler.anchoredPosition.y + 10F);
@@ -32,6 +49,13 @@ public class Inventory : MonoBehaviour {
             // Move Down
             if (openCooler.anchoredPosition.y >= -458F) {
                 openCooler.anchoredPosition = new Vector2(openCooler.anchoredPosition.x, openCooler.anchoredPosition.y - 10F);
+            } else {
+                // Make the UI invisible
+                for (int i = 0; i < imageVisibility.Length; i++) {
+                    if (imageVisibility[i] != null) {
+                        imageVisibility[i].enabled = false;
+                    }
+                }
             }
         }
     }

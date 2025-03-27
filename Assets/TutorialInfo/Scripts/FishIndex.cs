@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class FishIndex : MonoBehaviour {
     // Declare variables
     private TMP_Text fishName;
-    private TMP_Text[] UIvisibilityText;
+    private TMP_Text[] textVisibility;
     private Image hiddenFishIcon;
-    private Image[] UIvisibilityImage;
+    private Image[] imageVisibility;
     private RectTransform openBook;
     private bool isOpen;
 
@@ -19,15 +19,15 @@ public class FishIndex : MonoBehaviour {
         isOpen = false;
 
         // Make the UI invisible
-        UIvisibilityImage = transform.Find("Background").GetComponentsInChildren<Image>();
-        for (int i = 0; i < 17; i++) {
-            if (UIvisibilityImage[i] != null) {
-                UIvisibilityImage[i].enabled = false;
+        imageVisibility = transform.Find("Background").GetComponentsInChildren<Image>();
+        for (int i = 0; i < imageVisibility.Length; i++) {
+            if (imageVisibility[i] != null) {
+                imageVisibility[i].enabled = false;
             }
         }
-        UIvisibilityText = transform.Find("Background").GetComponentsInChildren<TMP_Text>();
-        for (int i = 0; i < 11; i++) {
-            UIvisibilityText[i].enabled = false;
+        textVisibility = transform.Find("Background").GetComponentsInChildren<TMP_Text>();
+        for (int i = 0; i < textVisibility.Length; i++) {
+            textVisibility[i].enabled = false;
         }
     }
 
@@ -43,13 +43,13 @@ public class FishIndex : MonoBehaviour {
 
         if (isOpen) {
             // Make the UI visible
-            for (int i = 0; i < 17; i++) {
-                if (UIvisibilityImage[i] != null) {
-                    UIvisibilityImage[i].enabled = true;
+            for (int i = 0; i < imageVisibility.Length; i++) {
+                if (imageVisibility[i] != null) {
+                    imageVisibility[i].enabled = true;
                 }
             }
-            for (int i = 0; i < 11; i++) {
-                UIvisibilityText[i].enabled = true;
+            for (int i = 0; i < textVisibility.Length; i++) {
+                textVisibility[i].enabled = true;
             }
 
             // Move Up
@@ -62,13 +62,13 @@ public class FishIndex : MonoBehaviour {
                 openBook.anchoredPosition = new Vector2(openBook.anchoredPosition.x, openBook.anchoredPosition.y - 10F);
             } else {
                 // Make the UI invisible
-                for (int i = 0; i < 17; i++) {
-                    if (UIvisibilityImage[i] != null) {
-                        UIvisibilityImage[i].enabled = false;
+                for (int i = 0; i < imageVisibility.Length; i++) {
+                    if (imageVisibility[i] != null) {
+                        imageVisibility[i].enabled = false;
                     }
                 }
-                for (int i = 0; i < 11; i++) {
-                    UIvisibilityText[i].enabled = false;
+                for (int i = 0; i < textVisibility.Length; i++) {
+                    textVisibility[i].enabled = false;
                 }
             }
         }

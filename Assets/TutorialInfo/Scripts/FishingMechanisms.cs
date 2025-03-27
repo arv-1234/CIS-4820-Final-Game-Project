@@ -4,7 +4,7 @@ using System.Collections;
 // This class manages the entire fishing system
 public class FishingMechanisms : MonoBehaviour {
     // Declare variables
-    public GameObject prefabBobble, prefabFish;
+    public GameObject prefabBobble, prefabFish, exclamationMark;
     private GameObject rodTip, staticBobble, launchedBobble, launchedFish, minigameUI, popUpUI, fishIndexUI;
     private ParticleSystem splash;
     private Renderer visible;
@@ -50,6 +50,8 @@ public class FishingMechanisms : MonoBehaviour {
 
         fishIndexUI = GameObject.Find("FishIndexBook");
         fishIndexScript = fishIndexUI.GetComponent<FishIndex>();
+
+        exclamationMark.SetActive(false);
     }
 
     void Update() {
@@ -134,6 +136,7 @@ public class FishingMechanisms : MonoBehaviour {
         // Check if it's null and/or cancelled from being destroyed earlier
         if (splash != null && !cancel) {
             // Fish on the line
+            exclamationMark.SetActive(true);
             splash.Play();
             Debug.Log("Fish on the line, left-click to capture.");
 
@@ -142,6 +145,7 @@ public class FishingMechanisms : MonoBehaviour {
 
             // Fish escaped (player decided to not begin capture)
             if (isBiting) {
+                exclamationMark.SetActive(false);
                 splash.Stop();
                 Debug.Log("Fish left, cannot capture it anymore.");
                 isBiting = false;
@@ -170,6 +174,7 @@ public class FishingMechanisms : MonoBehaviour {
     // Deals with the visiblity, resetting, and results of the fishing minigame UI
     IEnumerator minigame() {
         // Stop Update() from running new events
+        exclamationMark.SetActive(false);
         playingMinigame = true;
         Debug.Log("Minigame in progress.");
         

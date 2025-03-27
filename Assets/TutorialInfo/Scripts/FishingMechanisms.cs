@@ -120,6 +120,9 @@ public class FishingMechanisms : MonoBehaviour {
                     }
                 }
             }
+        } else {
+            rodLine.SetPosition(0, rodTip.transform.position);
+            rodLine.SetPosition(1, launchedBobble.transform.position);
         }
     }
     
@@ -202,6 +205,9 @@ public class FishingMechanisms : MonoBehaviour {
             Debug.Log("Fish escaped.");
         }
 
+        // Allow Update() to run again
+        playingMinigame = false;
+        
         // Reset the bobble
         isLaunched = false;
         Destroy(launchedBobble);
@@ -209,9 +215,6 @@ public class FishingMechanisms : MonoBehaviour {
         
         // Apply the fishing cooldown
         StartCoroutine(fishingCoolDown());
-        
-        // Allow Update() to run again
-        playingMinigame = false;
         yield return null;
     }
 }

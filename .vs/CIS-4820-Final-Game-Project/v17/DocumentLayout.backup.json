@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|c:\\users\\arvin\\cis-4820-final-game-project\\assets\\tutorialinfo\\scripts\\playerlook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\playerlook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|c:\\users\\arvin\\cis-4820-final-game-project\\assets\\tutorialinfo\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PlayerLook.cs",
+              "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\PlayerLook.cs",
+              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\PlayerLook.cs",
+              "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\PlayerLook.cs",
+              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\PlayerLook.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T16:41:02.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T17:54:11.089Z",
               "EditorCaption": ""

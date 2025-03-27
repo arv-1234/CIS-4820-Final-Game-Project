@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 8.0f;
     public float jumpHeight = 5.0f;
     public float rotateSpeed = 50.0f;
+    public float airSpeedMultiplier = 1.5f; // Added air speed multiplier
 
     Vector3 playerVelocity;
     Vector3 rotateDirection;
@@ -22,82 +23,98 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        playerAnimator = GetComponent<Animation>();  // Use Legacy Animation
+        playerAnimator = GetComponent<Animation>();
     }
 
     void Update()
     {
-        // **Capture movement input**
-        Vector3 inputDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
-        inputDirection = transform.TransformDirection(inputDirection); // Convert local to world space
+        Vector3 moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
 
-        // **Handle running**
-        if (Input.GetKey(KeyCode.P))
+        moveDirection = transform.TransformDirection(moveDirection);
+
+        float currentSpeed; // made change here
+
+        if(Input.GetKey(KeyCode.P))
         {
-            playerAnimator.CrossFade("Run", 0.1f);
-            inputDirection *= runSpeed;
+            currentSpeed = runSpeed;
         }
         else
         {
-            if (inputDirection.magnitude == 0 && !isJumping)  
+            currentSpeed = moveSpeed;
+        }
+
+        if(!IsGrounded())
+        {
+            currentSpeed *= airSpeedMultiplier;
+        }
+
+        moveDirection *= currentSpeed;
+
+        if(IsGrounded())
+        {
+            if(Input.GetKey(KeyCode.P))
             {
-                playerAnimator.CrossFade("Idle", 0.1f);
+                playerAnimator.CrossFade("Run", 0.1f);
             }
-            else if (!isJumping)  
+            else
             {
-                playerAnimator.CrossFade("Walk", 0.1f);
-                inputDirection *= moveSpeed;
+                if(moveDirection.magnitude == 0)
+                {
+                    playerAnimator.CrossFade("Idle", 0.1f);
+                }
+                else
+                {
+                    playerAnimator.CrossFade("Walk", 0.1f);
+                }
             }
         }
 
-        // **Maintain forward momentum while airborne**
-        if (IsGrounded()) 
+        if(IsGrounded())
         {
-            yVelocity = 0; // Reset vertical velocity when grounded
+            yVelocity = 0;
 
-            if (isJumping)
+            if(isJumping)
             {
-                playerAnimator.CrossFade("Idle", 0.1f);  
+                playerAnimator.CrossFade("Idle", 0.1f);
             }
             isJumping = false;
 
-            if (Input.GetButtonDown("Jump"))
+            if(Input.GetButton("Jump"))
             {
-                Debug.Log("Jump");
+                //Debug.Log("Jump");
                 playerAnimator.CrossFade("Jump", 0.1f);
                 yVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 isJumping = true;
             }
-
-            // Apply new movement input only when grounded
-            playerVelocity = inputDirection;
+            playerVelocity = moveDirection;
         }
         else
         {
-            // Apply gravity while in the air
             yVelocity += gravity * Time.deltaTime;
-
-            // Keep momentum while airborne (preserve x and z)
-            playerVelocity.x = inputDirection.x;
-            playerVelocity.z = inputDirection.z;
+            playerVelocity.x = moveDirection.x;
+            playerVelocity.y = moveDirection.y;
         }
 
-        // **Apply vertical movement**
         playerVelocity.y = yVelocity;
 
-        // **Handle rotation**
         float moveHorz = Input.GetAxis("Horizontal");
-        if (moveHorz > 0)
+
+        if(moveHorz > 0)
+        {
             rotateDirection = new Vector3(0, 1, 0);
+        }
         else if (moveHorz < 0)
+        {
             rotateDirection = new Vector3(0, -1, 0);
+        }
         else
+        {
             rotateDirection = Vector3.zero;
+        }
 
         controller.transform.Rotate(rotateDirection, rotateSpeed * Time.deltaTime);
-
-        // **Move the character**
         controller.Move(playerVelocity * Time.deltaTime);
+        
     }
 
     bool IsGrounded()

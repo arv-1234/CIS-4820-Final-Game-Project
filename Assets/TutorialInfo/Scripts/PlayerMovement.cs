@@ -31,18 +31,18 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.P))
         {
-            playerAnimator.CrossFade("Run");  // Play run animation if P is pressed
+            playerAnimator.CrossFade("Run", 0.1f);  // Play run animation if P is pressed
             playerVelocity *= runSpeed;
         }
         else
         {
             if (playerVelocity.magnitude == 0 && !isJumping)  // Prevent Idle when jumping
             {
-                playerAnimator.CrossFade("Idle");  // Play idle if no movement
+                playerAnimator.CrossFade("Idle", 0.1f);  // Play idle if no movement
             }
             else if (!isJumping)  // Only transition to walk if not jumping
             {
-                playerAnimator.CrossFade("Walk");  // Play walking animation
+                playerAnimator.CrossFade("Walk", 0.1f);  // Play walking animation
                 playerVelocity *= moveSpeed;
             }
         }
@@ -54,14 +54,14 @@ public class PlayerMovement : MonoBehaviour
         {
             if (isJumping)
             {
-                playerAnimator.CrossFade("Idle");  // Once landed, transition back to Idle (Replace with play if need be)
+                playerAnimator.CrossFade("Idle", 0.1f);  // Once landed, transition back to Idle (Replace with play if need be)
             }
             isJumping = false;
 
             if (Input.GetButtonDown("Jump"))
             {
                 Debug.Log("Jump");
-                playerAnimator.CrossFade("Jump");  // Play Jump animation using Play()
+                playerAnimator.CrossFade("Jump", 0.1f);  // Play Jump animation using Play()
                 yVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 isJumping = true;
             }

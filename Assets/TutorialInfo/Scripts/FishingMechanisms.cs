@@ -189,6 +189,7 @@ public class FishingMechanisms : MonoBehaviour {
 
             // Fish springs out of the water
             launchedBobble.GetComponent<SphereCollider>().enabled = false;
+            prefabFish = Resources.Load<GameObject>(fish.getName());
             launchedFish = Instantiate(prefabFish, launchedBobble.transform.position + new Vector3(0, 0.3F, 0), transform.Find("Fish_Launcher").gameObject.transform.rotation);
             launchedFish.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, 500F, 0));
 

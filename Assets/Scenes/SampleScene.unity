@@ -2719,6 +2719,7 @@ MonoBehaviour:
   runSpeed: 8
   jumpHeight: 1
   rotateSpeed: 50
+  airSpeedMultiplier: 1.5
 --- !u!143 &785766885
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2761,10 +2762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38354788ba0d2d84881a7100dd52e0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCamera: {fileID: 330585545}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &797938765
 GameObject:
   m_ObjectHideFlags: 0

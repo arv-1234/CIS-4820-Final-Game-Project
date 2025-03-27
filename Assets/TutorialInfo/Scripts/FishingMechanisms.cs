@@ -44,11 +44,9 @@ public class FishingMechanisms : MonoBehaviour {
 
         minigameUI = GameObject.Find("FishingMinigame");
         minigameScript = minigameUI.GetComponent<FishingMinigame>();
-        minigameUI.SetActive(false);
 
         popUpUI = GameObject.Find("FishPopUp");
         popUpScript = popUpUI.GetComponent<FishPopUp>();
-        popUpUI.SetActive(false);
 
         fishIndexUI = GameObject.Find("FishIndexBook");
         fishIndexScript = fishIndexUI.GetComponent<FishIndex>();
@@ -173,10 +171,8 @@ public class FishingMechanisms : MonoBehaviour {
         Debug.Log("Minigame in progress.");
         
         // Make the fishing minigame UI visible, change the difficulty, and reset its values
-        minigameUI.SetActive(true);
         fish = fishManager.getRandomFish();
         minigameScript.setDifficulty(fish.getRarity());
-        minigameScript.reset();
 
         // Wait for the minigame to finish and get the result (win = 1, lost = 2)
         yield return new WaitUntil(() => minigameScript.exit);
@@ -184,7 +180,6 @@ public class FishingMechanisms : MonoBehaviour {
         
         if (minigameProgress == 1F) {
             // Notify which fish appeared
-            popUpUI.SetActive(true);
             popUpScript.reset(fish.getName(), fish.getIsNew());
             yield return new WaitUntil(() => popUpScript.exit);
 
@@ -205,9 +200,6 @@ public class FishingMechanisms : MonoBehaviour {
         } else {
             Debug.Log("Fish escaped.");
         }
-
-        // Deactivate the fishing minigame (invisible)
-        minigameUI.SetActive(false);
 
         // Reset the bobble
         isLaunched = false;

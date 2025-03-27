@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 // This class manages the UI for the fishing minigame
 public class FishingMinigame : MonoBehaviour {
     // Declare variables
     private float result, speed, minSpeed, maxSpeed, minMaxFish, minCatch, maxCatch;
     private RectTransform progressBar, catchBar, fishIcon;
+    private Image[] imageVisability;
     private bool changeDirection;
     public bool exit;
     private int direction, newDirection, rarity;
@@ -15,10 +17,18 @@ public class FishingMinigame : MonoBehaviour {
         progressBar = transform.Find("Background").Find("ProgressBar").GetComponent<RectTransform>();
         catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
         fishIcon = transform.Find("Background").Find("Fish").GetComponent<RectTransform>();
+
+        // Make them invisible
+        imageVisability = transform.Find("Background").GetComponentsInChildren<Image>();
+        for (int i = 0; i < 5; i++) {
+            imageVisability[i].enabled = false;
+        }
+
+        // Make the code inactive
+        exit = true;
     }
 
     void Update() {
-        // Once the minigame is finished, exit
         if (!exit) {
             // Changes the fish's direction
             if (changeDirection) {
@@ -27,17 +37,17 @@ public class FishingMinigame : MonoBehaviour {
 
             // Moves the fish
             if (direction == 0) {
-                // Fish goes up
+                // Up
                 if (fishIcon.anchoredPosition.y < 248) {
                     fishIcon.anchoredPosition = new Vector2(fishIcon.anchoredPosition.x, fishIcon.anchoredPosition.y + speed);
                 }
             } else if (direction == 1) {
-                // Fish goes down
+                // Down
                 if (fishIcon.anchoredPosition.y > -236) {
                     fishIcon.anchoredPosition = new Vector2(fishIcon.anchoredPosition.x, fishIcon.anchoredPosition.y - speed);
                 }
             } else {
-                // Fish stands still
+                // Still
             }
 
             // Holding Left-Click: moves the catch bar upwards, else it goes downwards
@@ -59,6 +69,9 @@ public class FishingMinigame : MonoBehaviour {
                 } else {
                     // Progress Bar is at max (100%), we win!
                     result = 1F;
+                    for (int i = 0; i < 5; i++) {
+                        imageVisability[i].enabled = false;
+                    }
                     exit = true;
                 }
             } else {
@@ -68,15 +81,18 @@ public class FishingMinigame : MonoBehaviour {
                 } else {
                     // Progress Bar is at min (0%), we lost!
                     result = 2F;
+                    for (int i = 0; i < 5; i++) {
+                        imageVisability[i].enabled = false;
+                    }
                     exit = true;
                 }
             }
         }
     }
 
-    // Delay before switching the fish's directions
+    // Delay before switching the fish's direction
     IEnumerator fishDirection() {
-        // Update() doesn't constantly run this code
+        // So Update() doesn't constantly run this code
         changeDirection = false;
 
         // Waits 0-2 seconds before changing the direction
@@ -95,17 +111,12 @@ public class FishingMinigame : MonoBehaviour {
         changeDirection = true;
     }
 
-    // Resets the values (replayability)
+    // Resets the values (replayability) and makes them visible
     public void reset() {
         result = 0F;
 
-        progressBar = transform.Find("Background").Find("ProgressBar").GetComponent<RectTransform>();
         progressBar.sizeDelta = new Vector2(progressBar.sizeDelta.x, 149.09F);
-
-        catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
         catchBar.anchoredPosition = new Vector2(catchBar.anchoredPosition.x, -195F);
-        
-        fishIcon = transform.Find("Background").Find("Fish").GetComponent<RectTransform>();
         fishIcon.anchoredPosition = new Vector2(catchBar.anchoredPosition.x, -159F);
 
         direction = Random.Range(0, 3);
@@ -113,6 +124,10 @@ public class FishingMinigame : MonoBehaviour {
         changeDirection = true;
 
         speed = Random.Range(minSpeed, maxSpeed + 1F) / 10F;
+
+        for (int i = 0; i < 5; i++) {
+            imageVisability[i].enabled = true;
+        }
 
         exit = false;
     } 
@@ -127,7 +142,6 @@ public class FishingMinigame : MonoBehaviour {
         if (rarity == 1) {
             minSpeed = 1F;
             maxSpeed = 5F;
-            catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
             catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 142.82F);
             minMaxFish = 60F;
             minCatch = -196F;
@@ -135,7 +149,6 @@ public class FishingMinigame : MonoBehaviour {
         } else if (rarity == 2) {
             minSpeed = 4F;
             maxSpeed = 8F;
-            catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
             catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 103.9F);
             minMaxFish = 40F;
             minCatch = -211F;
@@ -143,7 +156,6 @@ public class FishingMinigame : MonoBehaviour {
         } else {
             minSpeed = 8F;
             maxSpeed = 10F;
-            catchBar = transform.Find("Background").Find("CatchBar").GetComponent<RectTransform>();
             catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 77F);
             minMaxFish = 25F;
             minCatch = -225F;

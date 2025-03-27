@@ -8,33 +8,43 @@ public class FishPopUp : MonoBehaviour {
     // Declare variables
     public bool exit;
     private TMP_Text caughtText, newText;
+    private Image[] fishIcons;
     private Image fishIcon;
 
     void Start() {
-        // Initiate variables
+        // Initialize variables (make the code inactive and text+icon invisible at first)
+        exit = true;
+
         caughtText = transform.Find("CaughtText").GetComponent<TMP_Text>();
+        caughtText.enabled = false;
+
         newText = transform.Find("NewText").GetComponent<TMP_Text>();
-        fishIcon = transform.Find("Fish").GetComponent<Image>();
+        newText.enabled = false;
+
+        fishIcons = transform.GetComponentsInChildren<Image>();
+        for (int i = 0; i < 8; i++) {
+            fishIcons[i].enabled = false;
+        }
     }
 
     void Update() {
-        // Make the pop up fade in and out
         if (!exit) {
+            // Make the pop up fade in and out
             StartCoroutine(fadeAnimation());
         }
     }
 
-    // Reset the values, edit the text, and display if it's new
+    // Make text+icon visible, reset values, edit the text, and activate the code
     public void reset(string fishName, bool isNew) {
-        caughtText = transform.Find("CaughtText").GetComponent<TMP_Text>();
-        newText = transform.Find("NewText").GetComponent<TMP_Text>();
-        fishIcon = transform.Find("Fish").GetComponent<Image>();
+        caughtText.enabled = true;
+        newText.enabled = true;
+
+        fishIcon = transform.Find(fishName).GetComponent<Image>();
+        fishIcon.enabled = true;
 
         caughtText.canvasRenderer.SetAlpha(0F);
         newText.canvasRenderer.SetAlpha(0F);
         fishIcon.canvasRenderer.SetAlpha(0F);
-
-        exit = false;
 
         caughtText.text = "Caught a " + fishName + "!";
         if (isNew) {
@@ -42,10 +52,12 @@ public class FishPopUp : MonoBehaviour {
         } else {
             newText.text = "";
         }
+
+        exit = false;
     }
 
     IEnumerator fadeAnimation() {
-        // Return true early to not keep the program waiting
+        // Return true early to stop the code from constantly activating
         exit = true;
 
         // Fade in
@@ -60,5 +72,11 @@ public class FishPopUp : MonoBehaviour {
         caughtText.CrossFadeAlpha(0, 0.5F, false);
         newText.CrossFadeAlpha(0, 0.5F, false);
         fishIcon.CrossFadeAlpha(0, 0.5F, false);
+        
+        // Make text+icon invisible again
+        yield return new WaitForSeconds(0.5F);
+        caughtText.enabled = false;
+        newText.enabled = false;
+        fishIcon.enabled = false;
     }
-}
+} 

@@ -215,6 +215,5 @@ public class FishingMechanisms : MonoBehaviour {
         
         // Apply the fishing cooldown
         StartCoroutine(fishingCoolDown());
-        yield return null;
     }
 }

@@ -21,7 +21,7 @@ public class FishPopUp : MonoBehaviour {
         newText = transform.Find("NewText").GetComponent<TMP_Text>();
         newText.enabled = false;
 
-        fishIcons = transform.GetComponentsInChildren<Image>();
+        fishIcons = GetComponentsInChildren<Image>();
         for (int i = 0; i < 8; i++) {
             fishIcons[i].enabled = false;
         }
@@ -34,18 +34,21 @@ public class FishPopUp : MonoBehaviour {
         }
     }
 
-    // Make text+icon visible, reset values, edit the text, and activate the code
+    // Reset the pop up
     public void reset(string fishName, bool isNew) {
+        // Make the text and icon visible
         caughtText.enabled = true;
         newText.enabled = true;
 
         fishIcon = transform.Find(fishName).GetComponent<Image>();
         fishIcon.enabled = true;
 
+        // Make the text and icon invisible by setting their alpha color to zero
         caughtText.canvasRenderer.SetAlpha(0F);
         newText.canvasRenderer.SetAlpha(0F);
         fishIcon.canvasRenderer.SetAlpha(0F);
 
+        // Modify text
         caughtText.text = "Caught a " + fishName + "!";
         if (isNew) {
             newText.text = "New";
@@ -53,14 +56,15 @@ public class FishPopUp : MonoBehaviour {
             newText.text = "";
         }
 
+        // Activate Update()
         exit = false;
     }
 
     IEnumerator fadeAnimation() {
-        // Return true early to stop the code from constantly activating
+        // Stop the code from constantly activating
         exit = true;
 
-        // Fade in
+        // Fade the text and icon in
         caughtText.CrossFadeAlpha(1, 0.5F, false);
         newText.CrossFadeAlpha(1, 0.5F, false);
         fishIcon.CrossFadeAlpha(1, 0.5F, false);
@@ -68,12 +72,12 @@ public class FishPopUp : MonoBehaviour {
         // Wait for a few seconds
         yield return new WaitForSeconds(3F);
 
-        // Fade out
+        // Fade the text and icon out
         caughtText.CrossFadeAlpha(0, 0.5F, false);
         newText.CrossFadeAlpha(0, 0.5F, false);
         fishIcon.CrossFadeAlpha(0, 0.5F, false);
         
-        // Make text+icon invisible again
+        // Make the text and icon invisible again
         yield return new WaitForSeconds(0.5F);
         caughtText.enabled = false;
         newText.enabled = false;

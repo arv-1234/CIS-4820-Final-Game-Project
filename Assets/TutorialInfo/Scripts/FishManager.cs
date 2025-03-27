@@ -1,47 +1,45 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 // This class manages all of the fish
 public class FishManager {
     // Declare variables
-    private List<Fish> commonFish;
-    private List<Fish> rareFish;
-    private List<Fish> legendaryFish;
+    private Fish[] common, rare, legendary;
+    private int chance, index;
 
-    private int num;
-
-    // Initialize all of the fish species to their rarity list
+    // Initialize all of the fish species to their rarity array
     public void initialize() {
-        commonFish = new List<Fish>();
-        rareFish = new List<Fish>();
-        legendaryFish = new List<Fish>();
+        common = new Fish[4];
+        rare = new Fish[3];
+        legendary = new Fish[1];
 
-        commonFish.Add(new Fish("Moorish", 1));
-        commonFish.Add(new Fish("Flying Fish", 1));
-        commonFish.Add(new Fish("Bass", 1));
-        commonFish.Add(new Fish("Beta Fish", 1));
-        rareFish.Add(new Fish("Turtle", 2));
-        rareFish.Add(new Fish("Squid", 2));
-        rareFish.Add(new Fish("Dolphin", 2));
-        legendaryFish.Add(new Fish("Shark", 3));
+        common[0] = new Fish("Moorish", 1);
+        common[1] = new Fish("Flying Fish", 1);
+        common[2] = new Fish("Bass", 1);
+        common[3] = new Fish("Beta Fish", 1);
+
+        rare[0] = new Fish("Turtle", 2);
+        rare[1] = new Fish("Squid", 2);
+        rare[2] = new Fish("Dolphin", 2);
+
+        legendary[0] = new Fish("Shark", 3);
     }
 
     // Returns a random fish based on chance
     public Fish getRandomFish() {
-        // Choose a random number from 1% to 100%
-        num = Random.Range(1, 100);
+        // Choose a random number from 1%-100%
+        chance = Random.Range(1, 101);
 
         // Check which rarity was obtained: 1%-60% = Common, 61%-90% = Rare, 91%-100% = Legendary
-        if (num >= 1 && num <= 60) {
+        if (chance >= 1 && chance <= 60) {
             // Check which common fish was obtained
-            num = Random.Range(0, commonFish.Count);
-            return commonFish[num];
-        } else if (num >= 61 && num <= 90) {
+            index = Random.Range(0, 4);
+            return common[index];
+        } else if (chance >= 61 && chance <= 90) {
             // Check which rare fish was obtained
-            num = Random.Range(0, rareFish.Count);
-            return rareFish[num];
+            index = Random.Range(0, 3);
+            return rare[index];
         } else {
-            return legendaryFish[0];
+            return legendary[0];
         }
     }
 }

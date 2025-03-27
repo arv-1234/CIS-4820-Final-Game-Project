@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &156747081375112595
+--- !u!1 &927877614062799732
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,445 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8868389684713234869}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:TailFinUpper_L
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8868389684713234869
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 156747081375112595}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.4908587, y: 0.059690405, z: 0.8691912, w: -0.0011826748}
-  m_LocalPosition: {x: -0.003299793, y: 0.0033804786, z: 0.0033196036}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3289137171878694748}
-  m_Father: {fileID: 7690247368785455938}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1139036944350645660
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2116748353951735155}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:BodyFinSide2_L
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2116748353951735155
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139036944350645660}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.082594104, y: 0.07774587, z: -0.08157292, w: 0.99019176}
-  m_LocalPosition: {x: 0.0163588, y: 1.3968395e-11, z: -1.10291366e-10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4363729017841635980}
-  m_Father: {fileID: 3281664113360352109}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1359803468236272641
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3289137171878694748}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:TailFinUpperEnd_L
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3289137171878694748
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359803468236272641}
-  serializedVersion: 2
-  m_LocalRotation: {x: 1.818213e-17, y: 1.110223e-16, z: 2.0816678e-17, w: 1}
-  m_LocalPosition: {x: 0.020346036, y: -8.881784e-18, z: -8.881784e-18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8868389684713234869}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1460341103555140129
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8836682868296229850}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:BodyFinSide3_R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8836682868296229850
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1460341103555140129}
-  serializedVersion: 2
-  m_LocalRotation: {x: 2.7755576e-17, y: -2.7755576e-17, z: 2.7755576e-17, w: 1}
-  m_LocalPosition: {x: -0.015739327, y: 0, z: 1.11022296e-17}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5482503025199597071}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2062578578256199762
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 944167837352620580}
-  - component: {fileID: 3116331364942951416}
-  - component: {fileID: 6218791675734953899}
-  m_Layer: 0
-  m_Name: Dolphin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &944167837352620580
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062578578256199762}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.01014, y: 4.939992, z: 14.7320595}
-  m_LocalScale: {x: 35.83312, y: 35.83312, z: 35.83312}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6260607521931772926}
-  - {fileID: 7771095164359964909}
-  - {fileID: 2823956039958135497}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &3116331364942951416
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062578578256199762}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7b071290b50c9a94ab102e7f2635a081, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!54 &6218791675734953899
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062578578256199762}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 2
---- !u!1 &3321236112947510874
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6929876130050656489}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:TailFinUpper_R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6929876130050656489
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3321236112947510874}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.059690397, y: -0.4908587, z: 0.0011826567, w: 0.8691912}
-  m_LocalPosition: {x: -0.003299793, y: 0.0033804786, z: -0.0033196036}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8822410280530315084}
-  m_Father: {fileID: 7690247368785455938}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3911322975384916983
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5057872242556975257}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:BackB_M
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5057872242556975257
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3911322975384916983}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.00342439, y: 0.001091987, z: 0.31229165, w: 0.9499795}
-  m_LocalPosition: {x: -0.014502978, y: -0.018639011, z: -2.220446e-18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4628505388818405326}
-  m_Father: {fileID: 8131932575424129295}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4290823256490272569
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1678691562808090683}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:BodyFinUpperAEnd_M
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1678691562808090683
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4290823256490272569}
-  serializedVersion: 2
-  m_LocalRotation: {x: 4.135903e-25, y: 1.2407709e-24, z: 5.551115e-17, w: 1}
-  m_LocalPosition: {x: -0.02433881, y: 8.881784e-18, z: -5.1768995e-33}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2667795932213538895}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5188515945231190960
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5268156160266053527}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:Head_M
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5268156160266053527
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5188515945231190960}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.97773236, w: 0.20985575}
-  m_LocalPosition: {x: 0.0024744703, y: -0.0009871459, z: 2.5574844e-11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5103876859741685412}
-  - {fileID: 8918857635584164985}
-  m_Father: {fileID: 2823956039958135497}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5249364168215475681
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4628505388818405326}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:BackB1_M
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4628505388818405326
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5249364168215475681}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.00053500064, y: 0.0039343373, z: -0.06224047, w: 0.9980533}
-  m_LocalPosition: {x: -0.024442906, y: 2.6645352e-17, z: -1.110223e-18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7690247368785455938}
-  m_Father: {fileID: 5057872242556975257}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5422359368521846499
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3281664113360352109}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:BodyFinSide1_L
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3281664113360352109
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5422359368521846499}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.35042143, y: -0.22114182, z: 0.8595577, w: -0.29910147}
-  m_LocalPosition: {x: -0.02962219, y: -0.015302184, z: 0.008183869}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2116748353951735155}
-  m_Father: {fileID: 2823956039958135497}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5439736313644794420
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5482503025199597071}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:BodyFinSide2_R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5482503025199597071
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5439736313644794420}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.0825941, y: 0.07774585, z: -0.08157291, w: 0.99019176}
-  m_LocalPosition: {x: -0.0163588, y: -4.440892e-18, z: -1.1029138e-10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8836682868296229850}
-  m_Father: {fileID: 4775812239355198107}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5534734252335555560
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6260607521931772926}
-  - component: {fileID: 5225033030245682048}
-  - component: {fileID: 5509317848398021415}
-  - component: {fileID: 7815674585001228965}
+  - component: {fileID: 8917036853234437935}
+  - component: {fileID: 660474852732095387}
+  - component: {fileID: 1331804647505494610}
+  - component: {fileID: 1613415500197814685}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -454,36 +19,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6260607521931772926
+--- !u!4 &8917036853234437935
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5534734252335555560}
+  m_GameObject: {fileID: 927877614062799732}
   serializedVersion: 2
   m_LocalRotation: {x: 0.119779915, y: 0.025762225, z: -0.003109237, w: 0.9924613}
   m_LocalPosition: {x: -0.0017, y: 0.05903853, z: 0.0055}
   m_LocalScale: {x: 0.012513793, y: 0.02817367, z: 0.13932142}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 944167837352620580}
+  m_Father: {fileID: 7740900690761615363}
   m_LocalEulerAnglesHint: {x: 13.763, y: 2.974, z: 0}
---- !u!33 &5225033030245682048
+--- !u!33 &660474852732095387
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5534734252335555560}
+  m_GameObject: {fileID: 927877614062799732}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5509317848398021415
+--- !u!23 &1331804647505494610
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5534734252335555560}
+  m_GameObject: {fileID: 927877614062799732}
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -522,13 +87,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7815674585001228965
+--- !u!65 &1613415500197814685
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5534734252335555560}
+  m_GameObject: {fileID: 927877614062799732}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -543,7 +108,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &5596522220147144454
+--- !u!1 &1272689271082026735
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -551,65 +116,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2823956039958135497}
+  - component: {fileID: 4362639081777260930}
   m_Layer: 0
-  m_Name: dolfin:dolfin:Root_M
+  m_Name: dolfin:dolfin:Jaw_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2823956039958135497
+--- !u!4 &4362639081777260930
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5596522220147144454}
+  m_GameObject: {fileID: 1272689271082026735}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.01418709, y: -0.70696443, z: -0.01418709, w: 0.70696443}
-  m_LocalPosition: {x: -1.7040669e-12, y: 0.05465394, z: 0.042957626}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8131932575424129295}
-  - {fileID: 3281664113360352109}
-  - {fileID: 4775812239355198107}
-  - {fileID: 5268156160266053527}
-  m_Father: {fileID: 944167837352620580}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5691153320000389220
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4363729017841635980}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:BodyFinSide3_L
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4363729017841635980
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5691153320000389220}
-  serializedVersion: 2
-  m_LocalRotation: {x: -5.551115e-17, y: 8.326673e-17, z: 1.6653345e-16, w: 1}
-  m_LocalPosition: {x: 0.015739327, y: 8.881784e-18, z: 6.661338e-18}
+  m_LocalRotation: {x: 0, y: -0, z: -0.14075747, w: 0.9900441}
+  m_LocalPosition: {x: -0.024330683, y: 0.008768086, z: 2.1118506e-18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2116748353951735155}
+  m_Father: {fileID: 3387651060201678725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6026261636675868335
+--- !u!1 &1310096143259051179
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -617,8 +147,254 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7771095164359964909}
-  - component: {fileID: 6681332121846791548}
+  - component: {fileID: 1434838038998548557}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:BodyFinSide2_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1434838038998548557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310096143259051179}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0825941, y: 0.07774585, z: -0.08157291, w: 0.99019176}
+  m_LocalPosition: {x: -0.0163588, y: -4.440892e-18, z: -1.1029138e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6600876886398324184}
+  m_Father: {fileID: 4905517580219999059}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1312469926442779650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7740900690761615363}
+  - component: {fileID: 7988761644307493102}
+  - component: {fileID: 2808007727379260650}
+  m_Layer: 0
+  m_Name: Dolphin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7740900690761615363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312469926442779650}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -11.25, y: 2.69, z: 13.11878}
+  m_LocalScale: {x: 35.83312, y: 35.83312, z: 35.83312}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8917036853234437935}
+  - {fileID: 7820767643198364729}
+  - {fileID: 3268857955200274023}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!95 &7988761644307493102
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312469926442779650}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7b071290b50c9a94ab102e7f2635a081, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!54 &2808007727379260650
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312469926442779650}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
+--- !u!1 &1838125715924971564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8776676887209610936}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:BackB1_M
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8776676887209610936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838125715924971564}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00053500064, y: 0.0039343373, z: -0.06224047, w: 0.9980533}
+  m_LocalPosition: {x: -0.024442906, y: 2.6645352e-17, z: -1.110223e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7049792877307379849}
+  m_Father: {fileID: 5802027354305507545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2068343287153661220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2248137803532980391}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:BodyFinSide2_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2248137803532980391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068343287153661220}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.082594104, y: 0.07774587, z: -0.08157292, w: 0.99019176}
+  m_LocalPosition: {x: 0.0163588, y: 1.3968395e-11, z: -1.10291366e-10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6936023058554445950}
+  m_Father: {fileID: 6269597379573518157}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2420015773405644509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3387651060201678725}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:Head_M
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3387651060201678725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2420015773405644509}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0.97773236, w: 0.20985575}
+  m_LocalPosition: {x: 0.0024744703, y: -0.0009871459, z: 2.5574844e-11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4180970090285458735}
+  - {fileID: 4362639081777260930}
+  m_Father: {fileID: 3268857955200274023}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2453267053097098086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4496418888996612580}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:BodyFinUpperA_M
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4496418888996612580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2453267053097098086}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0.012186336, w: 0.99992573}
+  m_LocalPosition: {x: -0.017716318, y: -8.881784e-18, z: 4.0523138e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6157813802536833156}
+  m_Father: {fileID: 5823269432047688697}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3060637921932235766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7820767643198364729}
+  - component: {fileID: 6747998556975402830}
   m_Layer: 0
   m_Name: dolfin:dolfin:pSphere2.002
   m_TagString: Untagged
@@ -626,28 +402,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7771095164359964909
+--- !u!4 &7820767643198364729
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6026261636675868335}
+  m_GameObject: {fileID: 3060637921932235766}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 944167837352620580}
+  m_Father: {fileID: 7740900690761615363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &6681332121846791548
+--- !u!137 &6747998556975402830
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6026261636675868335}
+  m_GameObject: {fileID: 3060637921932235766}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -691,33 +467,33 @@ SkinnedMeshRenderer:
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 7504751627607205505, guid: 022485f29bd7da742a91f941d60320e9, type: 3}
   m_Bones:
-  - {fileID: 2823956039958135497}
-  - {fileID: 8131932575424129295}
-  - {fileID: 2667795932213538895}
-  - {fileID: 1678691562808090683}
-  - {fileID: 5057872242556975257}
-  - {fileID: 4628505388818405326}
-  - {fileID: 7690247368785455938}
-  - {fileID: 6929876130050656489}
-  - {fileID: 8822410280530315084}
-  - {fileID: 8868389684713234869}
-  - {fileID: 3289137171878694748}
-  - {fileID: 4775812239355198107}
-  - {fileID: 5482503025199597071}
-  - {fileID: 8836682868296229850}
-  - {fileID: 5268156160266053527}
-  - {fileID: 5103876859741685412}
-  - {fileID: 8918857635584164985}
-  - {fileID: 3281664113360352109}
-  - {fileID: 2116748353951735155}
-  - {fileID: 4363729017841635980}
+  - {fileID: 3268857955200274023}
+  - {fileID: 5823269432047688697}
+  - {fileID: 4496418888996612580}
+  - {fileID: 6157813802536833156}
+  - {fileID: 5802027354305507545}
+  - {fileID: 8776676887209610936}
+  - {fileID: 7049792877307379849}
+  - {fileID: 517673913344591777}
+  - {fileID: 5530047136037991339}
+  - {fileID: 8734280714630175151}
+  - {fileID: 53906511287135478}
+  - {fileID: 4905517580219999059}
+  - {fileID: 1434838038998548557}
+  - {fileID: 6600876886398324184}
+  - {fileID: 3387651060201678725}
+  - {fileID: 4180970090285458735}
+  - {fileID: 4362639081777260930}
+  - {fileID: 6269597379573518157}
+  - {fileID: 2248137803532980391}
+  - {fileID: 6936023058554445950}
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 2823956039958135497}
+  m_RootBone: {fileID: 3268857955200274023}
   m_AABB:
     m_Center: {x: -0.043818273, y: 0.00074245036, z: -0.0000000018626451}
     m_Extent: {x: 0.08307221, y: 0.046641305, z: 0.04468891}
   m_DirtyAABB: 0
---- !u!1 &6079004487678186897
+--- !u!1 &3171538101238592388
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -725,31 +501,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2667795932213538895}
+  - component: {fileID: 517673913344591777}
   m_Layer: 0
-  m_Name: dolfin:dolfin:BodyFinUpperA_M
+  m_Name: dolfin:dolfin:TailFinUpper_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2667795932213538895
+--- !u!4 &517673913344591777
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6079004487678186897}
+  m_GameObject: {fileID: 3171538101238592388}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0.012186336, w: 0.99992573}
-  m_LocalPosition: {x: -0.017716318, y: -8.881784e-18, z: 4.0523138e-17}
+  m_LocalRotation: {x: 0.059690397, y: -0.4908587, z: 0.0011826567, w: 0.8691912}
+  m_LocalPosition: {x: -0.003299793, y: 0.0033804786, z: -0.0033196036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1678691562808090683}
-  m_Father: {fileID: 8131932575424129295}
+  - {fileID: 5530047136037991339}
+  m_Father: {fileID: 7049792877307379849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6250433147953336927
+--- !u!1 &3956490772161562638
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -757,165 +533,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7690247368785455938}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:BackF_M
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7690247368785455938
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6250433147953336927}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0.03678123, w: 0.99932337}
-  m_LocalPosition: {x: -0.034952912, y: -1.7763568e-17, z: -7.216449e-18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8868389684713234869}
-  - {fileID: 6929876130050656489}
-  m_Father: {fileID: 4628505388818405326}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6347750721606554960
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8822410280530315084}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:TailFinUpperEnd_R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8822410280530315084
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6347750721606554960}
-  serializedVersion: 2
-  m_LocalRotation: {x: 1.3877788e-17, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.020346036, y: 1.7763568e-17, z: 8.881784e-18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6929876130050656489}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7070687213627864847
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4775812239355198107}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:BodyFinSide1_R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4775812239355198107
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7070687213627864847}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.2211418, y: -0.35042146, z: 0.29910153, w: 0.8595577}
-  m_LocalPosition: {x: -0.02962219, y: -0.015302184, z: -0.0081838695}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5482503025199597071}
-  m_Father: {fileID: 2823956039958135497}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7767753045934548479
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5103876859741685412}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:HeadEnd_M
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5103876859741685412
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7767753045934548479}
-  serializedVersion: 2
-  m_LocalRotation: {x: -9.82277e-25, y: -1.1587e-40, z: 1.179612e-16, w: 1}
-  m_LocalPosition: {x: -0.019025259, y: -8.881784e-18, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5268156160266053527}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7903577294291544379
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8918857635584164985}
-  m_Layer: 0
-  m_Name: dolfin:dolfin:Jaw_M
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8918857635584164985
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7903577294291544379}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0.14075747, w: 0.9900441}
-  m_LocalPosition: {x: -0.024330683, y: 0.008768086, z: 2.1118506e-18}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5268156160266053527}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8398572018418592272
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8131932575424129295}
+  - component: {fileID: 5823269432047688697}
   m_Layer: 0
   m_Name: dolfin:dolfin:BackA_M
   m_TagString: Untagged
@@ -923,20 +541,402 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8131932575424129295
+--- !u!4 &5823269432047688697
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8398572018418592272}
+  m_GameObject: {fileID: 3956490772161562638}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0324436, y: 0.032947954, z: -0.43216968, w: 0.90060604}
   m_LocalPosition: {x: -0.021813285, y: 2.6645352e-17, z: -7.8475386e-18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5057872242556975257}
-  - {fileID: 2667795932213538895}
-  m_Father: {fileID: 2823956039958135497}
+  - {fileID: 5802027354305507545}
+  - {fileID: 4496418888996612580}
+  m_Father: {fileID: 3268857955200274023}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4730790533635512932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7049792877307379849}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:BackF_M
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7049792877307379849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4730790533635512932}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0, z: -0.03678123, w: 0.99932337}
+  m_LocalPosition: {x: -0.034952912, y: -1.7763568e-17, z: -7.216449e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8734280714630175151}
+  - {fileID: 517673913344591777}
+  m_Father: {fileID: 8776676887209610936}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4782782866218220849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5530047136037991339}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:TailFinUpperEnd_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5530047136037991339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4782782866218220849}
+  serializedVersion: 2
+  m_LocalRotation: {x: 1.3877788e-17, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.020346036, y: 1.7763568e-17, z: 8.881784e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 517673913344591777}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5138524886102077257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4905517580219999059}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:BodyFinSide1_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4905517580219999059
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5138524886102077257}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.2211418, y: -0.35042146, z: 0.29910153, w: 0.8595577}
+  m_LocalPosition: {x: -0.02962219, y: -0.015302184, z: -0.0081838695}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1434838038998548557}
+  m_Father: {fileID: 3268857955200274023}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5146036026391898831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53906511287135478}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:TailFinUpperEnd_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &53906511287135478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5146036026391898831}
+  serializedVersion: 2
+  m_LocalRotation: {x: 1.818213e-17, y: 1.110223e-16, z: 2.0816678e-17, w: 1}
+  m_LocalPosition: {x: 0.020346036, y: -8.881784e-18, z: -8.881784e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8734280714630175151}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5153388864056283760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8734280714630175151}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:TailFinUpper_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8734280714630175151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5153388864056283760}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.4908587, y: 0.059690405, z: 0.8691912, w: -0.0011826748}
+  m_LocalPosition: {x: -0.003299793, y: 0.0033804786, z: 0.0033196036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 53906511287135478}
+  m_Father: {fileID: 7049792877307379849}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5321393009418379987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6600876886398324184}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:BodyFinSide3_R
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6600876886398324184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5321393009418379987}
+  serializedVersion: 2
+  m_LocalRotation: {x: 2.7755576e-17, y: -2.7755576e-17, z: 2.7755576e-17, w: 1}
+  m_LocalPosition: {x: -0.015739327, y: 0, z: 1.11022296e-17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1434838038998548557}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5649779252517635435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3268857955200274023}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:Root_M
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3268857955200274023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5649779252517635435}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.01418709, y: -0.70696443, z: -0.01418709, w: 0.70696443}
+  m_LocalPosition: {x: -1.7040669e-12, y: 0.05465394, z: 0.042957626}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5823269432047688697}
+  - {fileID: 6269597379573518157}
+  - {fileID: 4905517580219999059}
+  - {fileID: 3387651060201678725}
+  m_Father: {fileID: 7740900690761615363}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5715247949170878182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6269597379573518157}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:BodyFinSide1_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6269597379573518157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5715247949170878182}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.35042143, y: -0.22114182, z: 0.8595577, w: -0.29910147}
+  m_LocalPosition: {x: -0.02962219, y: -0.015302184, z: 0.008183869}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2248137803532980391}
+  m_Father: {fileID: 3268857955200274023}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6858766614656374707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4180970090285458735}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:HeadEnd_M
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4180970090285458735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858766614656374707}
+  serializedVersion: 2
+  m_LocalRotation: {x: -9.82277e-25, y: -1.1587e-40, z: 1.179612e-16, w: 1}
+  m_LocalPosition: {x: -0.019025259, y: -8.881784e-18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3387651060201678725}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7847117699947746805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6936023058554445950}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:BodyFinSide3_L
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6936023058554445950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7847117699947746805}
+  serializedVersion: 2
+  m_LocalRotation: {x: -5.551115e-17, y: 8.326673e-17, z: 1.6653345e-16, w: 1}
+  m_LocalPosition: {x: 0.015739327, y: 8.881784e-18, z: 6.661338e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2248137803532980391}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8323551105354451484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6157813802536833156}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:BodyFinUpperAEnd_M
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6157813802536833156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8323551105354451484}
+  serializedVersion: 2
+  m_LocalRotation: {x: 4.135903e-25, y: 1.2407709e-24, z: 5.551115e-17, w: 1}
+  m_LocalPosition: {x: -0.02433881, y: 8.881784e-18, z: -5.1768995e-33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4496418888996612580}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8984794375359990785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5802027354305507545}
+  m_Layer: 0
+  m_Name: dolfin:dolfin:BackB_M
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5802027354305507545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8984794375359990785}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00342439, y: 0.001091987, z: 0.31229165, w: 0.9499795}
+  m_LocalPosition: {x: -0.014502978, y: -0.018639011, z: -2.220446e-18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8776676887209610936}
+  m_Father: {fileID: 5823269432047688697}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

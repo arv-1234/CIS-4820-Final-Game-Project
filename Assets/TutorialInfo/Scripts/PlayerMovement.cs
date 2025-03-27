@@ -28,10 +28,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // Get input for forwrd/backward movement 
         Vector3 moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
 
+        // Convert from local to world space direction
         moveDirection = transform.TransformDirection(moveDirection);
 
+        // Determine movement speed (walk or run)
         float currentSpeed; // made change here
 
         if(Input.GetKey(KeyCode.P))
@@ -43,20 +46,23 @@ public class PlayerMovement : MonoBehaviour
             currentSpeed = moveSpeed;
         }
 
+        // Apply air speed multiplier if player is not grounded
         if(!IsGrounded())
         {
             currentSpeed *= airSpeedMultiplier;
         }
 
+        // apply calculated speed to movement direction
         moveDirection *= currentSpeed;
 
+        // Handle animations when on the ground 
         if(IsGrounded())
         {
-            if(Input.GetKey(KeyCode.P))
+            if(Input.GetKey(KeyCode.P)) // Running 
             {
                 playerAnimator.CrossFade("Run", 0.1f);
             }
-            else
+            else // Walking or Idle
             {
                 if(moveDirection.magnitude == 0)
                 {
@@ -69,16 +75,19 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        // Handle gravity and jumoing 
         if(IsGrounded())
         {
-            yVelocity = 0;
+            yVelocity = 0; // Reset vertical velocity when on the ground 
 
+            // Return to idle after landing 
             if(isJumping)
             {
                 playerAnimator.CrossFade("Idle", 0.1f);
             }
             isJumping = false;
 
+            // Jump if button is pressed 
             if(Input.GetButton("Jump"))
             {
                 //Debug.Log("Jump");
@@ -86,28 +95,34 @@ public class PlayerMovement : MonoBehaviour
                 yVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 isJumping = true;
             }
+
+            // Apply movement when grounded 
             playerVelocity = moveDirection;
         }
-        else
+        else // In mid-air
         {
+            
             yVelocity += gravity * Time.deltaTime;
+
+            // Maintain horizontal movement while in the air 
             playerVelocity.x = moveDirection.x;
             playerVelocity.y = moveDirection.y;
         }
 
+        // Apply vertical velocity 
         playerVelocity.y = yVelocity;
 
         float moveHorz = Input.GetAxis("Horizontal");
 
-        if(moveHorz > 0)
+        if(moveHorz > 0) // Rotate right
         {
             rotateDirection = new Vector3(0, 1, 0);
         }
-        else if (moveHorz < 0)
+        else if (moveHorz < 0) // Rotate left 
         {
             rotateDirection = new Vector3(0, -1, 0);
         }
-        else
+        else // Rotation
         {
             rotateDirection = Vector3.zero;
         }
@@ -117,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    // Check if player is toching the ground
     bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, controller.height / 2 + 0.1f);

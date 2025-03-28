@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|c:\\users\\arvin\\cis-4820-final-game-project\\assets\\tutorialinfo\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|c:\\users\\arvin\\cis-4820-final-game-project\\assets\\tutorialinfo\\scripts\\fishitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\fishitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|c:\\users\\arvin\\cis-4820-final-game-project\\assets\\tutorialinfo\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\assets\\tutorialinfo\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -18,11 +26,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FishItem.cs",
+              "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\FishItem.cs",
+              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\FishItem.cs",
+              "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\FishItem.cs",
+              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\FishItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T06:37:21.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\Inventory.cs",
+              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\Inventory.cs",
+              "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\Inventory.cs",
+              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\Inventory.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwEUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T06:23:41.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "PlayerLook.cs",
               "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\PlayerLook.cs",
               "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\PlayerLook.cs",
@@ -34,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\PlayerMovement.cs",
@@ -42,8 +76,7 @@
               "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\PlayerMovement.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwGgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T17:54:11.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T17:54:11.089Z"
             }
           ]
         }

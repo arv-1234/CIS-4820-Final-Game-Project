@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,9 @@ public class Inventory : MonoBehaviour {
     private RectTransform openCooler;
     private Image[] imageVisibility;
     private bool isOpen;
+
+    private List<FishItem> items = new List<FishItem>();
+    private Dictionary<string, FishItem> itemDictionary = new Dictionary<string, FishItem>();
 
     void Start() {
         // Initiate variables
@@ -58,5 +62,16 @@ public class Inventory : MonoBehaviour {
                 }
             }
         }
+    }
+
+
+    public void addFish(Fish fish)
+    {
+        Sprite fishSprite = getSprite(fish.getName());
+    }
+
+    public Sprite getSprite(string fishName)
+    {
+        return Resources.Load<Sprite>(fishName);
     }
 }

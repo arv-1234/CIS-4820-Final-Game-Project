@@ -71,6 +71,7 @@
     <Compile Include="Assets\TutorialInfo\Scripts\FishingMechanisms.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\TouchingWater.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\FishIndex.cs" />
+    <Compile Include="Assets\TutorialInfo\Scripts\FishItem.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\FishPopUp.cs" />
   </ItemGroup>
   <ItemGroup>

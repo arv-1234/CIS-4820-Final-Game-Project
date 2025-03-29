@@ -51,7 +51,7 @@ public class Inventory : MonoBehaviour {
             }
         } else {
             // Move Down
-            if (openCooler.anchoredPosition.y >= -458F) {
+            if (openCooler.anchoredPosition.y >= -558F) {
                 openCooler.anchoredPosition = new Vector2(openCooler.anchoredPosition.x, openCooler.anchoredPosition.y - 10F);
             } else {
                 // Make the UI invisible

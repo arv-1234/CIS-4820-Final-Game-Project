@@ -5,7 +5,7 @@ using System.Collections;
 public class FishingMechanisms : MonoBehaviour {
     // Declare variables
     public GameObject prefabBobble, prefabFish, exclamationMark;
-    private GameObject rodTip, staticBobble, launchedBobble, launchedFish, minigameUI, popUpUI, fishIndexUI;
+    private GameObject rodTip, staticBobble, launchedBobble, launchedFish;
     private ParticleSystem splash;
     private Renderer visible;
     private LineRenderer rodLine;
@@ -16,7 +16,7 @@ public class FishingMechanisms : MonoBehaviour {
     private FishingMinigame minigameScript;
     private FishPopUp popUpScript;
     private FishIndex fishIndexScript;
-    private Inventory inventory;
+    private Inventory inventoryScript;
     
     void Start() {
         // Initiate variables
@@ -43,16 +43,10 @@ public class FishingMechanisms : MonoBehaviour {
         fishManager = new FishManager();
         fishManager.initialize();
 
-        minigameUI = GameObject.Find("FishingMinigame");
-        minigameScript = minigameUI.GetComponent<FishingMinigame>();
-
-        popUpUI = GameObject.Find("FishPopUp");
-        popUpScript = popUpUI.GetComponent<FishPopUp>();
-
-        fishIndexUI = GameObject.Find("FishIndexBook");
-        fishIndexScript = fishIndexUI.GetComponent<FishIndex>();
-
-        inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+        minigameScript = GameObject.Find("FishingMinigame").GetComponent<FishingMinigame>();
+        popUpScript = GameObject.Find("FishPopUp").GetComponent<FishPopUp>();
+        fishIndexScript = GameObject.Find("FishIndexBook").GetComponent<FishIndex>();
+        inventoryScript = GameObject.Find("InventoryBox").GetComponent<Inventory>();
 
         exclamationMark.SetActive(false);
     }
@@ -205,7 +199,7 @@ public class FishingMechanisms : MonoBehaviour {
             launchedFish.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, 500F, 0));
 
             // Fish is put into inventory
-            inventory.addFish(fish);
+            inventoryScript.addFish(fish);
             
             // Delay before destroying the fish model
             StartCoroutine(destroyFish(launchedFish));

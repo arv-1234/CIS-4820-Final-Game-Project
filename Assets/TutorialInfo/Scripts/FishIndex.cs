@@ -58,7 +58,7 @@ public class FishIndex : MonoBehaviour {
             }
         } else {
             // Move Down
-            if (openBook.anchoredPosition.y >= -458F) {
+            if (openBook.anchoredPosition.y >= -558F) {
                 openBook.anchoredPosition = new Vector2(openBook.anchoredPosition.x, openBook.anchoredPosition.y - 10F);
             } else {
                 // Make the UI invisible

@@ -8,9 +8,10 @@ public class Inventory : MonoBehaviour {
     private RectTransform openCooler;
     private Image[] imageVisibility;
     private bool isOpen;
+    public slotItem [] inventorySlot;
 
-    private List<FishItem> items = new List<FishItem>();
-    private Dictionary<string, FishItem> itemDictionary = new Dictionary<string, FishItem>();
+    //private List<FishItem> items = new List<FishItem>();
+    //private Dictionary<string, FishItem> itemDictionary = new Dictionary<string, FishItem>();
 
     void Start() {
         // Initiate variables
@@ -69,7 +70,16 @@ public class Inventory : MonoBehaviour {
     {
         Sprite fishSprite = getSprite(fish.getName());
 
-        Debug.Log("Name: " + fish.getName() + " Quant: 1" + " Sprite: " + fishSprite);
+        FishItem slotFish = new FishItem(fish, fishSprite);
+
+        for (int i = 0; i < inventorySlot.Length; i++)
+        {
+            if (inventorySlot[i].isFull == false)
+            {
+                inventorySlot[i].itemFish(slotFish.getFishName(), slotFish.getQuantity(), slotFish.getSprite());
+                return;
+            }
+        }
     }
 
     public Sprite getSprite(string fishName)

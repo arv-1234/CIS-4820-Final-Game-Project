@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FishItem : MonoBehaviour
+public class FishItem
 {
     private Fish fishes;
     private int quantity;
@@ -14,7 +14,7 @@ public class FishItem : MonoBehaviour
         quantity = 1;
     }
 
-    public int  getQuant()
+    public int  getQuantity()
     {
         return quantity;
     }
@@ -22,5 +22,15 @@ public class FishItem : MonoBehaviour
     public void AddQuantity()
     {
         quantity += 1;
+    }
+
+    public Sprite getSprite()
+    {
+        return fishSprite;
+    }
+
+    public string getFishName()
+    {
+        return fishes.getName();
     }
 }

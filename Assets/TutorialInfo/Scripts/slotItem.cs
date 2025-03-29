@@ -11,6 +11,12 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
     public int quantity;
     public Sprite itemSprite;
     public bool isFull;
+    public string itemDescription;
+
+    // item description slot 
+    public Image itemDescImage;
+    public TMP_Text itemDescNameText;
+    public TMP_Text itemDescText;
 
     // Item Slot
     [SerializeField]

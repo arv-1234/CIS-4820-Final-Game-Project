@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour {
     // Declare variables
     private RectTransform openCooler;
     private Image[] imageVisibility;
-    private bool isOpen;
+    public bool isOpen;
     public slotItem [] inventorySlot;
 
     //private List<FishItem> items = new List<FishItem>();

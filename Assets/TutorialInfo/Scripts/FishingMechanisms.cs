@@ -2,7 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 // This class manages the entire fishing system
-public class FishingMechanisms : MonoBehaviour {
+public class FishingMechanisms : MonoBehaviour
+{
     // Declare variables
     public GameObject prefabBobble, prefabFish, exclamationMark;
     private GameObject rodTip, staticBobble, launchedBobble, launchedFish;
@@ -10,15 +11,16 @@ public class FishingMechanisms : MonoBehaviour {
     private Renderer visible;
     private LineRenderer rodLine;
     private float launchVelocity, minigameProgress;
-    private bool isLaunched, coroutineActive, isBiting, pause, playingMinigame, cancel; 
+    private bool isLaunched, coroutineActive, isBiting, pause, playingMinigame, cancel;
     private FishManager fishManager;
     private Fish fish;
     private FishingMinigame minigameScript;
     private FishPopUp popUpScript;
     private FishIndex fishIndexScript;
     private Inventory inventoryScript;
-    
-    void Start() {
+
+    void Start()
+    {
         // Initiate variables
         rodTip = transform.Find("Bobble_Launcher").gameObject;
         staticBobble = transform.Find("Bobble (Static)").gameObject;
@@ -33,7 +35,7 @@ public class FishingMechanisms : MonoBehaviour {
         rodLine.material = new Material(Shader.Find("Legacy Shaders/Particles/Alpha Blended Premultiply"));
 
         launchVelocity = 0F;
-        
+
         isLaunched = false;
         coroutineActive = false;
         isBiting = false;
@@ -51,28 +53,41 @@ public class FishingMechanisms : MonoBehaviour {
         exclamationMark.SetActive(false);
     }
 
-    void Update() {
+    void Update()
+    {
+
+        if (inventoryScript.isOpen)
+        {
+            return;
+        }
         // No actions can be done while in a fishing minigame
-        if (!playingMinigame) {
+        if (!playingMinigame)
+        {
             // Connect the tip of the rod to the bobble with a line
-            if (isLaunched) {
+            if (isLaunched)
+            {
                 rodLine.SetPosition(0, rodTip.transform.position);
                 rodLine.SetPosition(1, launchedBobble.transform.position);
 
                 // Wait for a fish to appear
-                if (!coroutineActive) {
+                if (!coroutineActive)
+                {
                     coroutineActive = true;
                     StartCoroutine(fishAppearance());
                 }
-            } else {
+            }
+            else
+            {
                 rodLine.SetPosition(0, rodTip.transform.position);
                 rodLine.SetPosition(1, staticBobble.transform.position);
             }
-            
+
             // Different actions can be done depending on if a fish is biting or not
-            if (isBiting) {
+            if (isBiting)
+            {
                 // Pressing/Holding Left-Click: starts the fishing minigame
-                if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0))) {
+                if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)))
+                {
                     isBiting = false;
                     coroutineActive = false;
                     Debug.Log("Attempting to capture the fish.");
@@ -80,18 +95,24 @@ public class FishingMechanisms : MonoBehaviour {
                     // Play minigame to get the fish 
                     StartCoroutine(minigame());
                 }
-            } else {
+            }
+            else
+            {
                 // Cooldown before launching the bobble again
-                if (!pause) {
+                if (!pause)
+                {
                     // Holding Left-Click: increases the launch velocity of the bobble
-                    if (Input.GetMouseButton(0) && !isLaunched && launchVelocity < 700F) {
+                    if (Input.GetMouseButton(0) && !isLaunched && launchVelocity < 700F)
+                    {
                         launchVelocity += 5F;
                     }
 
                     // Releasing Left-Click: launches or discards the bobble 
-                    if (Input.GetMouseButtonUp(0)) {
+                    if (Input.GetMouseButtonUp(0))
+                    {
                         // Check if the bobble was launched
-                        if (isLaunched) {
+                        if (isLaunched)
+                        {
                             // The bobble returns to the rod
                             isLaunched = false;
                             cancel = true;
@@ -101,7 +122,9 @@ public class FishingMechanisms : MonoBehaviour {
 
                             // Enable the static bobble (visible)
                             visible.enabled = true;
-                        } else {            
+                        }
+                        else
+                        {
                             // The bobble is being launched
                             isLaunched = true;
 
@@ -110,7 +133,7 @@ public class FishingMechanisms : MonoBehaviour {
 
                             // Create and launch the prefab bobble
                             launchedBobble = Instantiate(prefabBobble, rodTip.transform.position, rodTip.transform.rotation);
-                            launchedBobble.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, launchVelocity, 0));
+                            launchedBobble.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, launchVelocity, 0));
                             splash = launchedBobble.transform.Find("Watersplash").GetComponent<ParticleSystem>();
 
                             // Reset the launch velocity
@@ -119,19 +142,23 @@ public class FishingMechanisms : MonoBehaviour {
                     }
                 }
             }
-        } else {
+        }
+        else
+        {
             rodLine.SetPosition(0, rodTip.transform.position);
             rodLine.SetPosition(1, launchedBobble.transform.position);
         }
     }
-    
+
     // Delay before changing the water particles to indicate that a fish is (or is not) on the line
-    IEnumerator fishAppearance() {
+    IEnumerator fishAppearance()
+    {
         cancel = false;
-		yield return new WaitForSeconds(Random.Range(3F, 9F));
+        yield return new WaitForSeconds(Random.Range(3F, 9F));
 
         // Check if it's null and/or cancelled from being destroyed earlier
-        if (splash != null && !cancel) {
+        if (splash != null && !cancel)
+        {
             // Fish on the line
             exclamationMark.SetActive(true);
             splash.Play();
@@ -141,20 +168,24 @@ public class FishingMechanisms : MonoBehaviour {
             yield return new WaitForSeconds(Random.Range(3F, 5F));
 
             // Fish escaped (player decided to not begin capture)
-            if (isBiting) {
+            if (isBiting)
+            {
                 exclamationMark.SetActive(false);
                 splash.Stop();
                 Debug.Log("Fish left, cannot capture it anymore.");
                 isBiting = false;
                 coroutineActive = false;
             }
-        } else {
+        }
+        else
+        {
             coroutineActive = false;
         }
-	}
+    }
 
     // Fishing cooldown after attempting to capture a fish (stops spam holding issues)
-    IEnumerator fishingCoolDown() {
+    IEnumerator fishingCoolDown()
+    {
         pause = true;
         yield return new WaitForSeconds(1F);
         pause = false;
@@ -162,19 +193,21 @@ public class FishingMechanisms : MonoBehaviour {
     }
 
     // Delay before destroying the fish model
-    IEnumerator destroyFish(GameObject Fish) {
+    IEnumerator destroyFish(GameObject Fish)
+    {
         yield return new WaitForSeconds(5F);
         Destroy(Fish);
         Debug.Log("Fish model destroyed.");
     }
 
     // Deals with the visiblity, resetting, and results of the fishing minigame UI
-    IEnumerator minigame() {
+    IEnumerator minigame()
+    {
         // Stop Update() from running new events
         exclamationMark.SetActive(false);
         playingMinigame = true;
         Debug.Log("Minigame in progress.");
-        
+
         // Make the fishing minigame UI visible, change the difficulty, and reset its values
         fish = fishManager.getRandomFish();
         minigameScript.setDifficulty(fish.getRarity());
@@ -182,8 +215,9 @@ public class FishingMechanisms : MonoBehaviour {
         // Wait for the minigame to finish and get the result (win = 1, lost = 2)
         yield return new WaitUntil(() => minigameScript.exit);
         minigameProgress = minigameScript.getResult();
-        
-        if (minigameProgress == 1F) {
+
+        if (minigameProgress == 1F)
+        {
             // Notify which fish appeared
             popUpScript.reset(fish.getName(), fish.getIsNew());
             yield return new WaitUntil(() => popUpScript.exit);
@@ -196,25 +230,28 @@ public class FishingMechanisms : MonoBehaviour {
             launchedBobble.GetComponent<SphereCollider>().enabled = false;
             prefabFish = Resources.Load<GameObject>(fish.getName());
             launchedFish = Instantiate(prefabFish, launchedBobble.transform.position + new Vector3(0, 0.3F, 0), transform.Find("Fish_Launcher").transform.rotation);
-            launchedFish.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, 500F, 0));
+            launchedFish.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 500F, 0));
 
             // Fish is put into inventory
             inventoryScript.addFish(fish);
-            
+
+
             // Delay before destroying the fish model
             StartCoroutine(destroyFish(launchedFish));
-        } else {
+        }
+        else
+        {
             Debug.Log("Fish escaped.");
         }
 
         // Allow Update() to run again
         playingMinigame = false;
-        
+
         // Reset the bobble
         isLaunched = false;
         Destroy(launchedBobble);
         visible.enabled = true;
-        
+
         // Apply the fishing cooldown
         StartCoroutine(fishingCoolDown());
     }

@@ -9,9 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private Animation playerAnimator;
 
     private float gravity = -9.81f;
-    public float moveSpeed = 5.0f;
-    public float runSpeed = 8.0f;
-    public float jumpHeight = 5.0f;
+    public float moveSpeed = 10.0f;
+    public float runSpeed = 15.0f;
+    public float jumpHeight = 7.0f;
     public float rotateSpeed = 50.0f;
     public float airSpeedMultiplier = 1.5f; // Added air speed multiplier
 

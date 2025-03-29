@@ -76,7 +76,7 @@ public class Inventory : MonoBehaviour {
         {
             if (inventorySlot[i].isFull == false)
             {
-                inventorySlot[i].itemFish(slotFish.getFishName(), slotFish.getQuantity(), slotFish.getSprite());
+                inventorySlot[i].itemFish(slotFish.getFishName(), slotFish.getQuantity(), slotFish.getSprite(), slotFish.getDescription());
                 return;
             }
         }

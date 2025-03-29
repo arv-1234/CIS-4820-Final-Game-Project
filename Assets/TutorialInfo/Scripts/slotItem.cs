@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class slotItem : MonoBehaviour, IPointerClickHandler
 {
@@ -41,11 +42,12 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
     }
     */
 
-    public void itemFish(string itemName, int quantity, Sprite itemSprite)
+    public void itemFish(string itemName, int quantity, Sprite itemSprite, string descItem)
     {
         this.itemName = itemName;
         this.quantity = quantity;
         this.itemSprite = itemSprite;
+        this.itemDescription = descItem;
         isFull = true;
 
         quantityText.text = quantity.ToString();
@@ -73,5 +75,9 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
         Debug.Log("IS SELECTED");
         selectedShader.SetActive(true);
         isSelected = true;
+
+        itemDescNameText.text = itemName;
+        itemDescText.text = itemDescription;
+        itemDescImage.sprite = itemSprite;
     }
 }

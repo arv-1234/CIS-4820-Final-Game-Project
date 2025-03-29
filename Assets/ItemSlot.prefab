@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3429333, g: 0.63750434, b: 0.93207544, a: 0.15686275}
+  m_Color: {r: 0, g: 0.08141636, b: 0.16226411, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -169,9 +169,14 @@ MonoBehaviour:
   itemName: 
   quantity: 0
   itemSprite: {fileID: 0}
-  isFull: 0
+  itemDescription: 
   quantityText: {fileID: 3977341259902236158}
   itemImage: {fileID: 6537046478276218240}
+  selectedShader: {fileID: 1446558561355054381}
+  itemDescImage: {fileID: 0}
+  itemDescNameText: {fileID: 0}
+  itemDescText: {fileID: 0}
+  isSelected: 0
 --- !u!1 &3928572770935671280
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 60.7, y: 7.3}
+  m_AnchoredPosition: {x: 60.7, y: 2.699997}
   m_SizeDelta: {x: 53.66, y: 15.679401}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!222 &5175826287788195989

@@ -1,78 +1,85 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
-using Unity.VisualScripting;
 
 public class slotItem : MonoBehaviour, IPointerClickHandler
 {
     // Item Data
     public string itemName;
-    public int quantity;
+    public int quantity; // Initialized to 0 by default
     public Sprite itemSprite;
-    public bool isFull;
     public string itemDescription;
 
-    // item description slot 
+    // Stacking system
+    private int maxStack = 10;
+    [SerializeField] private TMP_Text quantityText;
+    [SerializeField] private Image itemImage;
+    public GameObject selectedShader;
+
+    // Description UI
     public Image itemDescImage;
     public TMP_Text itemDescNameText;
     public TMP_Text itemDescText;
 
-    // Item Slot
-    [SerializeField]
-    private TMP_Text quantityText;
-
-    [SerializeField]
-    private Image itemImage;
-
-    public GameObject selectedShader;
     public bool isSelected;
 
     private Inventory playerInventory;
 
-    private void Start()
-    {
-        playerInventory = GameObject.Find("InventoryBox").GetComponent<Inventory>();
-    }
-    /*
     void Start()
     {
-        inventoryScript = GameObject.Find("InventoryBox").GetComponent<Inventory>();
+        playerInventory = GameObject.Find("InventoryBox").GetComponent<Inventory>();
+        UpdateUI(); // Initialize empty slot visuals
     }
-    */
 
-    public void itemFish(string itemName, int quantity, Sprite itemSprite, string descItem)
+    public int AddItem(string newName, int addQty, Sprite newSprite, string newDesc)
     {
-        this.itemName = itemName;
-        this.quantity = quantity;
-        this.itemSprite = itemSprite;
-        this.itemDescription = descItem;
-        isFull = true;
+        // If slot is empty
+        if (quantity == 0)
+        {
+            itemName = newName;
+            itemSprite = newSprite;
+            itemDescription = newDesc;
+            quantity = addQty;
+            UpdateUI();
+            return 0;
+        }
 
-        quantityText.text = quantity.ToString();
-        quantityText.enabled = true;
-        itemImage.sprite = itemSprite;
+        // If slot has matching item and space
+        if (itemName == newName && quantity < maxStack)
+        {
+            int total = quantity + addQty;
+            int remaining = Mathf.Max(total - maxStack, 0);
+            quantity = Mathf.Min(total, maxStack);
+            UpdateUI();
+            return remaining;
+        }
 
-        Debug.Log("Sprite Name: " + itemSprite);
-
+        // Can't add to this slot
+        return addQty;
     }
 
+    void UpdateUI()
+    {
+        // Always update image and text visibility
+        itemImage.enabled = quantity > 0;
+        itemImage.sprite = itemSprite;
+        quantityText.text = quantity.ToString();
+        quantityText.enabled = quantity > 0;
+    }
+
+    // Rest of the class remains unchanged
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
-            Debug.Log("Slot clicked!");
             onLeftClick();
         }
     }
 
-
     public void onLeftClick()
     {
         playerInventory.deSelectSlot();
-        //inventoryScript.deselectSlot();
-        Debug.Log("IS SELECTED");
         selectedShader.SetActive(true);
         isSelected = true;
 

@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|b:\\games\\development tools\\unity\\projects\\final project\\cis-4820-final-game-project\\assets\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|b:\\games\\development tools\\unity\\projects\\final project\\cis-4820-final-game-project\\assets\\skyboxmovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\skyboxmovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|b:\\games\\development tools\\unity\\projects\\final project\\cis-4820-final-game-project\\assets\\new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\assets\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,6 +27,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SkyboxMovementManager.cs",
+              "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\SkyboxMovementManager.cs",
+              "RelativeDocumentMoniker": "Assets\\SkyboxMovementManager.cs",
+              "ToolTip": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\SkyboxMovementManager.cs",
+              "RelativeToolTip": "Assets\\SkyboxMovementManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T10:49:52.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "New.cs",
+              "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\New.cs",
+              "RelativeDocumentMoniker": "Assets\\New.cs",
+              "ToolTip": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\New.cs",
+              "RelativeToolTip": "Assets\\New.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T10:42:41.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PauseMenu.cs",
               "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\PauseMenu.cs",
               "RelativeDocumentMoniker": "Assets\\PauseMenu.cs",
@@ -26,8 +60,7 @@
               "RelativeToolTip": "Assets\\PauseMenu.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T08:41:46.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T08:41:46.777Z"
             }
           ]
         }

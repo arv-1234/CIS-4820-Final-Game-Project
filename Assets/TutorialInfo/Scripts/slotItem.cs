@@ -22,7 +22,12 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
     public GameObject selectedShader;
     public bool isSelected;
 
-    //private Inventory inventoryScript;
+    private Inventory playerInventory;
+
+    private void Start()
+    {
+        playerInventory = GameObject.Find("InventoryBox").GetComponent<Inventory>();
+    }
     /*
     void Start()
     {
@@ -57,6 +62,7 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
 
     public void onLeftClick()
     {
+        playerInventory.deSelectSlot();
         //inventoryScript.deselectSlot();
         Debug.Log("IS SELECTED");
         selectedShader.SetActive(true);

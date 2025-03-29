@@ -86,4 +86,13 @@ public class Inventory : MonoBehaviour {
     {
         return Resources.Load<Sprite>(fishName);
     }
+
+    public void deSelectSlot()
+    {
+        for (int i = 0; i < inventorySlot.Length; i++)
+        {
+            inventorySlot[i].selectedShader.SetActive(false);
+            inventorySlot[i].isSelected = false;
+        }
+    }    
 }

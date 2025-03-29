@@ -16,6 +16,7 @@ public class FishingMechanisms : MonoBehaviour {
     private FishingMinigame minigameScript;
     private FishPopUp popUpScript;
     private FishIndex fishIndexScript;
+    private Inventory inventory;
     
     void Start() {
         // Initiate variables
@@ -50,6 +51,8 @@ public class FishingMechanisms : MonoBehaviour {
 
         fishIndexUI = GameObject.Find("FishIndexBook");
         fishIndexScript = fishIndexUI.GetComponent<FishIndex>();
+
+        inventory = GameObject.Find("Inventory").GetComponent<Inventory>();
 
         exclamationMark.SetActive(false);
     }
@@ -202,7 +205,7 @@ public class FishingMechanisms : MonoBehaviour {
             launchedFish.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, 500F, 0));
 
             // Fish is put into inventory
-
+            inventory.addFish(fish);
             
             // Delay before destroying the fish model
             StartCoroutine(destroyFish(launchedFish));

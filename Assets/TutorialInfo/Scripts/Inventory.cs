@@ -68,6 +68,8 @@ public class Inventory : MonoBehaviour {
     public void addFish(Fish fish)
     {
         Sprite fishSprite = getSprite(fish.getName());
+
+        Debug.Log("Name: " + fish.getName() + " Quant: 1" + " Sprite: " + fishSprite);
     }
 
     public Sprite getSprite(string fishName)

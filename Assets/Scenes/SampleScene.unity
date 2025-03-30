@@ -387,7 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantityText: {fileID: 1589485594}
-  numCoins: 0
+  numCoins: 300
 --- !u!1 &21429286
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +746,6 @@ RectTransform:
   m_Children:
   - {fileID: 480517459}
   - {fileID: 459974133}
-  - {fileID: 644787119}
   m_Father: {fileID: 1879770220}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -5715,6 +5714,18 @@ PrefabInstance:
       value: ItemSlot (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
+      propertyPath: itemName
+      value: Gold Fishing Rod
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
+      propertyPath: quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
+      propertyPath: itemSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c38efea9e9d968c4e9c499e8b41cb7a5, type: 3}
+    - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
       propertyPath: itemDescText
       value: 
       objectReference: {fileID: 1098322542}
@@ -5722,6 +5733,11 @@ PrefabInstance:
       propertyPath: itemDescImage
       value: 
       objectReference: {fileID: 699327134}
+    - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
+      propertyPath: itemDescription
+      value: A masterfully crafted rod with a radiant gold finish, offering superior
+        strength and better chances of landing prized fish.
+      objectReference: {fileID: 0}
     - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
       propertyPath: itemDescNameText
       value: 
@@ -5830,7 +5846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
       propertyPath: itemName
-      value: gdgfd
+      value: Silver Fishing Rod
       objectReference: {fileID: 0}
     - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
       propertyPath: quantity
@@ -5850,7 +5866,8 @@ PrefabInstance:
       objectReference: {fileID: 699327134}
     - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
       propertyPath: itemDescription
-      value: sfdsdfsdf
+      value: A finely crafted rod with a sleek silver finish. Lightweight yet durable,
+        it offers excellent precision for reeling in rare catches.
       objectReference: {fileID: 0}
     - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
       propertyPath: itemDescNameText
@@ -7273,120 +7290,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
---- !u!1001 &644787118
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 53056270}
-    m_Modifications:
-    - target: {fileID: 2123674266101903154, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_Name
-      value: ItemSlot (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: itemDescText
-      value: 
-      objectReference: {fileID: 1098322542}
-    - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: itemDescImage
-      value: 
-      objectReference: {fileID: 699327134}
-    - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: itemDescNameText
-      value: 
-      objectReference: {fileID: 2097535391}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
---- !u!224 &644787119 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8775594348440244250, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-  m_PrefabInstance: {fileID: 644787118}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &647809367
 GameObject:
   m_ObjectHideFlags: 0
@@ -15380,17 +15283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b2ff00fb2c8c6742944ff976ab0c1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1409492361 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
-  m_PrefabInstance: {fileID: 644787118}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b2ff00fb2c8c6742944ff976ab0c1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1434634511
 GameObject:
   m_ObjectHideFlags: 0
@@ -16449,7 +16341,6 @@ MonoBehaviour:
   buySlots:
   - {fileID: 1400950964}
   - {fileID: 1035340407}
-  - {fileID: 1409492361}
   priceText: {fileID: 268190564}
   isOpen: 0
   buyButton: {fileID: 998171772}

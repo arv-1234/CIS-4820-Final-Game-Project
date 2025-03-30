@@ -4,7 +4,7 @@ using UnityEngine;
 public class coinTotal : MonoBehaviour
 {
     public TMP_Text quantityText;
-    public int numCoins = 0;
+    public int numCoins = 300;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

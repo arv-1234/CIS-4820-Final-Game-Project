@@ -159,11 +159,14 @@ public class BuyUI : MonoBehaviour
     private float GetItemPrice(string itemName)
     {
         // Use same prices as SellUI for now
-        if (itemName == "Moorish" || itemName == "Flying Fish" ||
-            itemName == "Beta Fish" || itemName == "Bass") return 15.0f;
-        if (itemName == "Turtle" || itemName == "Squid" ||
-            itemName == "Dolphin") return 30.0f;
-        return 60.0f;
+        if(itemName == "Silver Fishing Rod")
+        {
+            return 50.0f;
+        }
+        else
+        {
+            return 150.0f;
+        }
     }
 
     public void ToggleBuyUI()

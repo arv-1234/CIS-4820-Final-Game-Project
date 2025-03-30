@@ -7,28 +7,8 @@
       "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\sellui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|c:\\users\\arvin\\cis-4820-final-game-project\\assets\\tutorialinfo\\scripts\\cointotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\cointotal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\assets\\tutorialinfo\\scripts\\slotitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\slotitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\assets\\tutorialinfo\\scripts\\sellinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\sellinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\assets\\tutorialinfo\\scripts\\fish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\fish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\assets\\tutorialinfo\\scripts\\fishmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\fishmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\assets\\tutorialinfo\\scripts\\fishitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\fishitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|c:\\users\\arvin\\cis-4820-final-game-project\\assets\\tutorialinfo\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,54 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "coinTotal.cs",
-              "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\coinTotal.cs",
-              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\coinTotal.cs",
-              "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\coinTotal.cs",
-              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\coinTotal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T06:47:50.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FishManager.cs",
-              "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\FishManager.cs",
-              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\FishManager.cs",
-              "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\FishManager.cs",
-              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\FishManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T06:15:54.067Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Fish.cs",
-              "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\Fish.cs",
-              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\Fish.cs",
-              "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\Fish.cs",
-              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\Fish.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T06:10:43.039Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "sellInteraction.cs",
               "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\sellInteraction.cs",
               "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\sellInteraction.cs",
               "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\sellInteraction.cs",
               "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\sellInteraction.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACAAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T05:23:43.432Z"
             },
@@ -105,31 +48,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T04:42:49.331Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "slotItem.cs",
-              "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\slotItem.cs",
-              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\slotItem.cs",
-              "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\slotItem.cs",
-              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\slotItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T17:23:32.455Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FishItem.cs",
-              "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\FishItem.cs",
-              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\FishItem.cs",
-              "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\FishItem.cs",
-              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\FishItem.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAswBEAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T17:22:58.575Z"
             }
           ]
         }
@@ -154,7 +72,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Inventory.cs",
               "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\Inventory.cs",
               "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\Inventory.cs",

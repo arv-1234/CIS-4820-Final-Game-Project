@@ -24,6 +24,7 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
 
     public bool isSelected;
 
+    public BuyUI buyUI;
     public SellUI sellUI;
     private Inventory playerInventory;
 
@@ -31,6 +32,7 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
     {
         playerInventory = GameObject.Find("InventoryBox").GetComponent<Inventory>();
         sellUI = GameObject.Find("SellScreen").GetComponent<SellUI>();
+        buyUI = GameObject.Find("BuyScreen").GetComponent<BuyUI>();
         UpdateUI(); // Initialize empty slot visuals
     }
 
@@ -82,6 +84,7 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
     public void onLeftClick()
     {
         // Always deselect both systems
+        if (buyUI != null) buyUI.deSelectSlots();
         if (sellUI != null) sellUI.deSelectSlots();
         if (playerInventory != null) playerInventory.deSelectSlot();
 

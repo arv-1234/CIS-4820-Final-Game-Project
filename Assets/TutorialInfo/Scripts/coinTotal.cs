@@ -8,12 +8,12 @@ public class coinTotal : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        quantityText.text = $"Coins: {numCoins}";
+        quantityText.text = $"${numCoins}";
     }
     public void UpdateCoins(int amount)
     {
         numCoins += amount;
-        quantityText.text = $"Coins: {numCoins}";
+        quantityText.text = $"${numCoins}";
     }
 
 

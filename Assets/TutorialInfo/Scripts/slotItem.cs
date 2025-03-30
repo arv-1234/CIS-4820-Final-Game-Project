@@ -24,11 +24,13 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
 
     public bool isSelected;
 
+    public SellUI sellUI;
     private Inventory playerInventory;
 
     void Start()
     {
         playerInventory = GameObject.Find("InventoryBox").GetComponent<Inventory>();
+        sellUI = GameObject.Find("SellScreen").GetComponent<SellUI>();
         UpdateUI(); // Initialize empty slot visuals
     }
 
@@ -59,7 +61,7 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
         return addQty;
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         // Always update image and text visibility
         itemImage.enabled = quantity > 0;
@@ -79,12 +81,23 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
 
     public void onLeftClick()
     {
-        playerInventory.deSelectSlot();
+        // Always deselect both systems
+        if (sellUI != null) sellUI.deSelectSlots();
+        if (playerInventory != null) playerInventory.deSelectSlot();
+
+        // Handle selection
         selectedShader.SetActive(true);
         isSelected = true;
 
+        // Update description
         itemDescNameText.text = itemName;
         itemDescText.text = itemDescription;
         itemDescImage.sprite = itemSprite;
+
+        // Update price display if in sell screen
+        if (sellUI != null && quantity > 0)
+        {
+            sellUI.UpdatePriceDisplay(this);
+        }
     }
 }

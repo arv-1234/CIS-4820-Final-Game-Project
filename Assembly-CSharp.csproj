@@ -65,10 +65,12 @@
     <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\FishManager.cs" />
     <Compile Include="Assets\New.cs" />
+    <Compile Include="Assets\TutorialInfo\Scripts\SellUI.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\FishingMinigame.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Inventory.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\slotItem.cs" />
+    <Compile Include="Assets\TutorialInfo\Scripts\sellInteraction.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\NewMonoBehaviourScript.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\FishingMechanisms.cs" />

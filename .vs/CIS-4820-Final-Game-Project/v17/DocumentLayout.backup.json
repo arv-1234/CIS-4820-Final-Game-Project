@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\",
+  "WorkspaceRootPath": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|b:\\games\\development tools\\unity\\projects\\final project\\cis-4820-final-game-project\\assets\\skyboxmovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\skyboxmovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|c:\\users\\arvin\\cis-4820-final-game-project\\assets\\tutorialinfo\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|b:\\games\\development tools\\unity\\projects\\final project\\cis-4820-final-game-project\\assets\\new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\assets\\tutorialinfo\\scripts\\slotitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\slotitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\assets\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\pausemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\assets\\tutorialinfo\\scripts\\fishitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\fishitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SkyboxMovementManager.cs",
-              "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\SkyboxMovementManager.cs",
-              "RelativeDocumentMoniker": "Assets\\SkyboxMovementManager.cs",
-              "ToolTip": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\SkyboxMovementManager.cs",
-              "RelativeToolTip": "Assets\\SkyboxMovementManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABNAAAA",
+              "DocumentIndex": 1,
+              "Title": "slotItem.cs",
+              "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\slotItem.cs",
+              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\slotItem.cs",
+              "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\slotItem.cs",
+              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\slotItem.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwFEAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T10:49:52.486Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-29T17:23:32.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "New.cs",
-              "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\New.cs",
-              "RelativeDocumentMoniker": "Assets\\New.cs",
-              "ToolTip": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\New.cs",
-              "RelativeToolTip": "Assets\\New.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\Inventory.cs",
+              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\Inventory.cs",
+              "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\Inventory.cs",
+              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\Inventory.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAIEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T10:42:41.742Z",
+              "WhenOpened": "2025-03-29T17:23:24.058Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PauseMenu.cs",
-              "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\PauseMenu.cs",
-              "RelativeDocumentMoniker": "Assets\\PauseMenu.cs",
-              "ToolTip": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\PauseMenu.cs",
-              "RelativeToolTip": "Assets\\PauseMenu.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAZAAAA",
+              "Title": "FishItem.cs",
+              "DocumentMoniker": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\FishItem.cs",
+              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\FishItem.cs",
+              "ToolTip": "C:\\Users\\arvin\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\FishItem.cs",
+              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\FishItem.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwBEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T08:41:46.777Z"
+              "WhenOpened": "2025-03-29T17:22:58.575Z"
             }
           ]
         }

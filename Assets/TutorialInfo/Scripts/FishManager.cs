@@ -12,14 +12,14 @@ public class FishManager {
         rare = new Fish[3];
         legendary = new Fish[1];
 
-        common[0] = new Fish("Moorish", 1);
-        common[1] = new Fish("Flying Fish", 1);
-        common[2] = new Fish("Bass", 1);
-        common[3] = new Fish("Beta Fish", 1);
+        common[0] = new Fish("Bass", 1);
+        common[1] = new Fish("Beta Fish", 1);
+        common[2] = new Fish("Flying Fish", 1);
+        common[3] = new Fish("Moorish", 1);
 
-        rare[0] = new Fish("Turtle", 2);
+        rare[0] = new Fish("Dolphin", 2);
         rare[1] = new Fish("Squid", 2);
-        rare[2] = new Fish("Dolphin", 2);
+        rare[2] = new Fish("Turtle", 2);
 
         legendary[0] = new Fish("Shark", 3);
     }

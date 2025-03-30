@@ -113,6 +113,7 @@ public class SellUI : MonoBehaviour
                 {
                     inventorySlot.itemName = "";
                     inventorySlot.itemSprite = null;
+                    inventorySlot.itemDescription = "";
                 }
                 inventorySlot.UpdateUI();
                 break;

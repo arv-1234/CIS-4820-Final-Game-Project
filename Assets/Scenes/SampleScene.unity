@@ -10194,7 +10194,7 @@ MonoBehaviour:
   priceText: {fileID: 1989672773}
   isOpen: 0
   sellButton: {fileID: 296747857}
-  coinManager: {fileID: 0}
+  coinManager: {fileID: 18758220}
 --- !u!1 &1547306404
 GameObject:
   m_ObjectHideFlags: 0

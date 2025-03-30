@@ -102,5 +102,11 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
         {
             sellUI.UpdatePriceDisplay(this);
         }
+
+        if (buyUI != null && quantity > 0)
+        {
+            buyUI.SelectSlot(this);
+        }
+
     }
 }

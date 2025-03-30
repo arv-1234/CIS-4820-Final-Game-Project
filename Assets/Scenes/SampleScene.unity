@@ -386,6 +386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantityText: {fileID: 1589485594}
+  numCoins: 0
 --- !u!1 &21429286
 GameObject:
   m_ObjectHideFlags: 0
@@ -4055,6 +4056,18 @@ PrefabInstance:
       value: ItemSlot
       objectReference: {fileID: 0}
     - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
+      propertyPath: itemName
+      value: gdgfd
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
+      propertyPath: quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
+      propertyPath: itemSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 75e76ee5ff2f6ab4da089782b4bf1873, type: 3}
+    - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
       propertyPath: itemDescText
       value: 
       objectReference: {fileID: 1098322542}
@@ -4062,6 +4075,10 @@ PrefabInstance:
       propertyPath: itemDescImage
       value: 
       objectReference: {fileID: 699327134}
+    - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
+      propertyPath: itemDescription
+      value: sfdsdfsdf
+      objectReference: {fileID: 0}
     - target: {fileID: 5546505145073085516, guid: 707117e96947c794f90dc7a7baa4e133, type: 3}
       propertyPath: itemDescNameText
       value: 
@@ -12098,11 +12115,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89555f19c24aed840a72d1c287d146f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInventory: {fileID: 370605531}
   buySlots:
   - {fileID: 1400950964}
   - {fileID: 1035340407}
   - {fileID: 1409492361}
+  priceText: {fileID: 268190564}
   isOpen: 0
+  buyButton: {fileID: 998171772}
+  coinManager: {fileID: 18758220}
 --- !u!1001 &1559244913
 PrefabInstance:
   m_ObjectHideFlags: 0

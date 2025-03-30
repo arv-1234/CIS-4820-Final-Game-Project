@@ -827,7 +827,11 @@ MonoBehaviour:
     speed: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Value: {x: -0.34137818, y: -0.0200042, z: -0.00082711136, w: -0.9397127}
+=======
+    m_Value: {x: -0.13998987, y: 0.55412436, z: -0.10514304, w: -0.81383365}
+>>>>>>> Stashed changes
 =======
     m_Value: {x: -0.13998987, y: 0.55412436, z: -0.10514304, w: -0.81383365}
 >>>>>>> Stashed changes
@@ -839,7 +843,11 @@ MonoBehaviour:
     speed: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_Value: 0.8660254
+=======
+    m_Value: 1.9816953
+>>>>>>> Stashed changes
 =======
     m_Value: 1.9816953
 >>>>>>> Stashed changes
@@ -1118,6 +1126,9 @@ MonoBehaviour:
     m_LastClickedID: 45030
     m_ExpandedIDs: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -1151,7 +1162,11 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     m_ExpandedIDs: 000000002eaf000030af000032af000034af000036af000038af00003aaf00003caf00003eaf000040af000042af000044af000046af000048af00004aaf00004caf00004eaf000050af0000
+=======
+    m_ExpandedIDs: 
+>>>>>>> Stashed changes
 =======
     m_ExpandedIDs: 
 >>>>>>> Stashed changes

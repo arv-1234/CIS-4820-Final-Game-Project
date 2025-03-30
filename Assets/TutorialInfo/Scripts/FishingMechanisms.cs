@@ -18,6 +18,7 @@ public class FishingMechanisms : MonoBehaviour
     private FishPopUp popUpScript;
     private FishIndex fishIndexScript;
     private Inventory inventoryScript;
+    private SellUI sellInterface;
 
     void Start()
     {
@@ -49,6 +50,8 @@ public class FishingMechanisms : MonoBehaviour
         popUpScript = GameObject.Find("FishPopUp").GetComponent<FishPopUp>();
         fishIndexScript = GameObject.Find("FishIndexBook").GetComponent<FishIndex>();
         inventoryScript = GameObject.Find("InventoryBox").GetComponent<Inventory>();
+        sellInterface = GameObject.Find("SellScreen").GetComponent<SellUI>();
+
 
         exclamationMark.SetActive(false);
     }
@@ -56,7 +59,7 @@ public class FishingMechanisms : MonoBehaviour
     void Update()
     {
 
-        if (inventoryScript.isOpen)
+        if (inventoryScript.isOpen || sellInterface.isOpen)
         {
             return;
         }

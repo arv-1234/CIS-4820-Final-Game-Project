@@ -14,6 +14,9 @@ public class SellUI : MonoBehaviour
     private Image[] imageVisibility;
     public bool isOpen;
 
+    public Button sellButton;
+    public coinTotal coinManager;
+
 
     void Start()
     {
@@ -32,6 +35,10 @@ public class SellUI : MonoBehaviour
         }
 
         playerInventory = GameObject.Find("InventoryBox").GetComponent<Inventory>();
+        coinManager = GameObject.Find("TotalCoins").GetComponent<coinTotal>();
+
+        sellButton.onClick.AddListener(SellSelectedItem);
+
     }
 
     void Update()
@@ -71,6 +78,44 @@ public class SellUI : MonoBehaviour
                         imageVisibility[i].enabled = false;
                     }
                 }
+            }
+        }
+    }
+
+    public void SellSelectedItem()
+    {
+        if (selectedSlot != null && selectedSlot.quantity > 0)
+        {
+            // Calculate total value
+            float totalValue = GetItemPrice(selectedSlot.itemName) * selectedSlot.quantity;
+
+            // Update coins
+            coinManager.UpdateCoins(Mathf.RoundToInt(totalValue));
+
+            // Update inventory
+            DeductFromInventory(selectedSlot.itemName, selectedSlot.quantity);
+
+            // Refresh UI
+            UpdateSellSlots();
+            deSelectSlots();
+        }
+    }
+
+
+    private void DeductFromInventory(string itemName, int quantity)
+    {
+        foreach (slotItem inventorySlot in playerInventory.inventorySlot)
+        {
+            if (inventorySlot.itemName == itemName)
+            {
+                inventorySlot.quantity -= quantity;
+                if (inventorySlot.quantity <= 0)
+                {
+                    inventorySlot.itemName = "";
+                    inventorySlot.itemSprite = null;
+                }
+                inventorySlot.UpdateUI();
+                break;
             }
         }
     }

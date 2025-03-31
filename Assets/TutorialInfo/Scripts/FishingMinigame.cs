@@ -5,12 +5,13 @@ using UnityEngine.UI;
 // This class manages the UI for the fishing minigame
 public class FishingMinigame : MonoBehaviour {
     // Declare variables
-    private float result, speed, minSpeed, maxSpeed, minMaxFish, minCatch, maxCatch;
+    private float result, speed, minSpeed, maxSpeed, minMaxFish, minCatch, maxCatch, rodStats;
     private RectTransform progressBar, catchBar, fishIcon;
     private Image[] imageVisability;
     private bool changeDirection;
     public bool exit;
     private int direction, newDirection, rarity;
+    private GameObject rod;
     
     void Start() {
         // Initialize variables
@@ -137,29 +138,50 @@ public class FishingMinigame : MonoBehaviour {
         return result;
     }
 
-    // Sets the difficulty depending on the fish's rarity (changes fish speed, catch bar size, and fish range)
+    // Sets the difficulty depending on the fish rod & rarity (changes fish speed, catch bar size, and fish range)
     public void setDifficulty(int rarity) {
+        rod = GameObject.Find("FishingRod");
+        if (rod != null) {
+            Debug.Log("Wooden Fishing Rod Found!");
+            rodStats = 0F;
+        } else {
+            rod = GameObject.Find("Silver Fishing Rod");
+            if (rod != null) { 
+                Debug.Log("Silver Fishing Rod Found!");
+                rodStats = 10F;
+            } else {
+                rod = GameObject.Find("Gold Fishing Rod");
+                if (rod != null) { 
+                    Debug.Log("Gold Fishing Rod Found!");
+                    rodStats = 25F;
+                } else {
+                    Debug.Log("No Rod Found!");
+                    rodStats = 0F;
+                }
+            }
+        }
+
         if (rarity == 1) {
             minSpeed = 1F;
             maxSpeed = 5F;
-            catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 142.82F);
-            minMaxFish = 60F;
-            minCatch = -196F;
-            maxCatch = 198F;
+            catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 142.82F + rodStats);
+            minMaxFish = 60F + rodStats;
+            minCatch = -196F + rodStats;
+            maxCatch = 198F - rodStats;
         } else if (rarity == 2) {
             minSpeed = 4F;
             maxSpeed = 8F;
-            catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 103.9F);
-            minMaxFish = 40F;
-            minCatch = -211F;
-            maxCatch = 215F;
+            catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 103.9F + rodStats);
+            minMaxFish = 40F + rodStats;
+            minCatch = -211F + rodStats;
+            maxCatch = 215F - rodStats;
         } else {
             minSpeed = 8F;
             maxSpeed = 10F;
-            catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 77F);
-            minMaxFish = 25F;
-            minCatch = -225F;
-            maxCatch = 230F;
+            catchBar.sizeDelta = new Vector2(catchBar.sizeDelta.x, 77F + rodStats);
+            minMaxFish = 25F + rodStats;
+            minCatch = -225F + rodStats;
+            maxCatch = 230F - rodStats;
         }
 
         reset();

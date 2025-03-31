@@ -6,7 +6,7 @@ public class SellUI : MonoBehaviour
 {
     // Add inventory reference
     public Inventory playerInventory;
-    public slotItem[] sellSlots; // Assign these in Inspector
+    public slotItem[] sellSlots; 
     public TMP_Text priceText;
     private slotItem selectedSlot;
 

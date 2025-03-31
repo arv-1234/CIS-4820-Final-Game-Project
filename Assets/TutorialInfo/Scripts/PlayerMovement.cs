@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed = 15.0f;
     public float jumpHeight = 7.0f;
     public float rotateSpeed = 50.0f;
-    public float airSpeedMultiplier = 1.5f; // Added air speed multiplier
+    public float airSpeedMultiplier = 1.5f; 
 
     Vector3 playerVelocity;
     Vector3 rotateDirection;

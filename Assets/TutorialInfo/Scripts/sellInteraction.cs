@@ -8,8 +8,7 @@ public class sellInteraction : MonoBehaviour
 
     private bool isPlayerNear;
 
-    public slotItem[] sellSlots; // Assign these in Inspector
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public slotItem[] sellSlots; 
     void Start()
     {
         sellPromptCanvas.enabled = false;
@@ -30,11 +29,11 @@ public class sellInteraction : MonoBehaviour
         {
             isPlayerNear = false;
             sellPromptCanvas.enabled = false;
-            sellUI.deSelectSlots(); // Add this line
+            sellUI.deSelectSlots();
         }
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (isPlayerNear && Input.GetKeyDown(KeyCode.E))

@@ -129,7 +129,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    // Rest of the class remains the same
+   
     public Sprite getSprite(string fishName)
     {
         return Resources.Load<Sprite>(fishName+"Boxed");

@@ -8,7 +8,7 @@ public class FishItem
 
     [TextArea]
     private string itemDesc;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
 
     public FishItem(Fish fish, Sprite sprite)
     {

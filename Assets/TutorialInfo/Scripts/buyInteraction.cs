@@ -7,7 +7,7 @@ public class buyInteraction : MonoBehaviour
     public BuyUI buyUI;
 
     private bool isPlayerNear;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         buyPromptCanvas.enabled = false;
@@ -28,7 +28,7 @@ public class buyInteraction : MonoBehaviour
         {
             isPlayerNear = false;
             buyPromptCanvas.enabled = false;
-            buyUI.deSelectSlots(); // Add this line
+            buyUI.deSelectSlots(); 
         }
     }
 
@@ -37,14 +37,9 @@ public class buyInteraction : MonoBehaviour
     {
         if (isPlayerNear && Input.GetKeyDown(KeyCode.E))
         {
-            // Toggle the sell UI
+            // Toggle the buy UI
             buyUI.ToggleBuyUI();
-            /*
-            if (sellUI.isOpen)
-            {
-                sellUI.UpdateSellSlots();
-            }
-            */
+          
         }
     }
 }

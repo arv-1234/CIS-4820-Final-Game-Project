@@ -158,7 +158,7 @@ public class BuyUI : MonoBehaviour
 
     private float GetItemPrice(string itemName)
     {
-        // Use same prices as SellUI for now
+        // Prices for fishing rod
         if(itemName == "Silver Fishing Rod")
         {
             return 50.0f;

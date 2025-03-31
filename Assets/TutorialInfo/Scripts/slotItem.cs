@@ -72,7 +72,7 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
         quantityText.enabled = quantity > 0;
     }
 
-    // Rest of the class remains unchanged
+
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -83,7 +83,7 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
 
     public void onLeftClick()
     {
-        // Always deselect both systems
+        // Always Deselect slots if not chosen
         if (buyUI != null) buyUI.deSelectSlots();
         if (sellUI != null) sellUI.deSelectSlots();
         if (playerInventory != null) playerInventory.deSelectSlot();
@@ -102,6 +102,7 @@ public class slotItem : MonoBehaviour, IPointerClickHandler
         {
             sellUI.UpdatePriceDisplay(this);
         }
+
 
         if (buyUI != null && quantity > 0)
         {

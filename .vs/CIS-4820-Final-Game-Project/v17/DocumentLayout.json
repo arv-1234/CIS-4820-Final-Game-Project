@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|b:\\games\\development tools\\unity\\projects\\final project\\cis-4820-final-game-project\\assets\\teleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\teleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Library\\PackageCache\\com.unity.render-pipelines.universal\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\assets\\tutorialinfo\\scripts\\sellinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\sellinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|b:\\games\\development tools\\unity\\projects\\final project\\cis-4820-final-game-project\\assets\\tutorialinfo\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6003C14B-D8CB-2774-9CF9-9DA379A11F4F}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Teleport.cs",
+              "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\Teleport.cs",
+              "RelativeDocumentMoniker": "Assets\\Teleport.cs",
+              "ToolTip": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\Teleport.cs",
+              "RelativeToolTip": "Assets\\Teleport.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T02:09:44.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Lit.shader",
               "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Library\\PackageCache\\com.unity.render-pipelines.universal\\Shaders\\Lit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal\\Shaders\\Lit.shader",
@@ -42,12 +55,11 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal\\Shaders\\Lit.shader",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-03-30T21:40:00.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-30T21:40:00.321Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "StylizedWater.shader",
               "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\Shaders\\StylizedWater.shader",
               "RelativeDocumentMoniker": "Assets\\Shaders\\StylizedWater.shader",
@@ -58,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "sellInteraction.cs",
               "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\sellInteraction.cs",
               "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\sellInteraction.cs",
@@ -70,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SellUI.cs",
               "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\SellUI.cs",
               "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\SellUI.cs",
@@ -79,40 +91,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T04:42:49.331Z"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "81c693f2-ef3d-46e2-acaa-79789ef5fe7e",
-        "Display": 0,
-        "X": 1422,
-        "Y": 226,
-        "Width": 1510,
-        "Height": 826,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\Inventory.cs",
-              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\Inventory.cs",
-              "ToolTip": "B:\\Games\\Development Tools\\Unity\\Projects\\Final Project\\CIS-4820-Final-Game-Project\\Assets\\TutorialInfo\\Scripts\\Inventory.cs",
-              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\Inventory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T17:23:24.058Z",
-              "EditorCaption": ""
             }
           ]
         }

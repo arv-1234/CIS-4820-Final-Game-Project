@@ -77,6 +77,7 @@
     <Compile Include="Assets\TutorialInfo\Scripts\TouchingWater.cs" />
     <Compile Include="Assets\SkyboxMovementManager.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\coinTotal.cs" />
+    <Compile Include="Assets\Teleport.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\FishIndex.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\FishItem.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\buyInteraction.cs" />

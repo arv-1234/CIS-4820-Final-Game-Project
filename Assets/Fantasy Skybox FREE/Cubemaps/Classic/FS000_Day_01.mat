@@ -63,7 +63,11 @@ Material:
     - _Layout: 0
     - _Mapping: 1
     - _MirrorOnBack: 0
+<<<<<<< Updated upstream
     - _Rotation: 54.49111
+=======
+    - _Rotation: 119.43455
+>>>>>>> Stashed changes
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Tint: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 0.5019608}

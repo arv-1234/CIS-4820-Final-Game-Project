@@ -10499,9 +10499,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   runSpeed: 15
-  jumpHeight: 7
+  jumpHeight: 5
   rotateSpeed: 50
-  airSpeedMultiplier: 1.5
+  airSpeedMultiplier: 1
 --- !u!143 &785766885
 CharacterController:
   m_ObjectHideFlags: 0
